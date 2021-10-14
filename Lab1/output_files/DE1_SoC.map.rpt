@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Thu Oct 14 16:35:46 2021
+Thu Oct 14 16:54:20 2021
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -14,10 +14,11 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
- 12. Analysis & Synthesis Suppressed Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -44,14 +45,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct 14 16:35:46 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct 14 16:54:20 2021       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
-; Top-level Entity Name           ; eD_FF                                       ;
+; Top-level Entity Name           ; register64                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1                                           ;
-; Total pins                      ; 5                                           ;
+; Total registers                 ; 64                                          ;
+; Total pins                      ; 131                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -70,7 +71,7 @@ agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; eD_FF              ; DE1_SoC            ;
+; Top-level entity name                                                           ; register64         ; DE1_SoC            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; State Machine Processing                                                        ; User-Encoded       ; Auto               ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
@@ -160,23 +161,23 @@ agreement for further details.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                      ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                  ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------+---------+
-; mux2_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/hunte/Documents/EE469/Lab1/mux2_1.sv ;         ;
-; D_FF.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/hunte/Documents/EE469/Lab1/D_FF.sv   ;         ;
-; eD_FF.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/hunte/Documents/EE469/Lab1/eD_FF.sv  ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                      ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------+---------+
+; mux2_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/hunte/Documents/EE469/Lab1/mux2_1.sv     ;         ;
+; D_FF.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/hunte/Documents/EE469/Lab1/D_FF.sv       ;         ;
+; eD_FF.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/hunte/Documents/EE469/Lab1/eD_FF.sv      ;         ;
+; register64.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/hunte/Documents/EE469/Lab1/register64.sv ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -184,36 +185,163 @@ agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 1           ;
+; Estimate of Logic utilization (ALMs needed) ; 33          ;
 ;                                             ;             ;
 ; Combinational ALUT usage for logic          ; 1           ;
 ;     -- 7 input functions                    ; 0           ;
 ;     -- 6 input functions                    ; 0           ;
 ;     -- 5 input functions                    ; 0           ;
-;     -- 4 input functions                    ; 1           ;
-;     -- <=3 input functions                  ; 0           ;
+;     -- 4 input functions                    ; 0           ;
+;     -- <=3 input functions                  ; 1           ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 1           ;
+; Dedicated logic registers                   ; 64          ;
 ;                                             ;             ;
-; I/O pins                                    ; 5           ;
+; I/O pins                                    ; 131         ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
-; Maximum fan-out node                        ; D_FF:d_ff|q ;
-; Maximum fan-out                             ; 2           ;
-; Total fan-out                               ; 12          ;
-; Average fan-out                             ; 1.00        ;
+; Maximum fan-out node                        ; reset~input ;
+; Maximum fan-out                             ; 65          ;
+; Total fan-out                               ; 453         ;
+; Average fan-out                             ; 1.39        ;
 +---------------------------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |eD_FF                     ; 1 (0)               ; 1 (0)                     ; 0                 ; 0          ; 5    ; 0            ; |eD_FF              ; eD_FF       ; work         ;
-;    |D_FF:d_ff|             ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |eD_FF|D_FF:d_ff    ; D_FF        ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+-------------+--------------+
+; |register64                ; 1 (0)               ; 64 (0)                    ; 0                 ; 0          ; 131  ; 0            ; |register64                               ; register64  ; work         ;
+;    |eD_FF:eachBit[0].d|    ; 1 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[0].d            ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[0].d|D_FF:d_ff  ; D_FF        ; work         ;
+;    |eD_FF:eachBit[10].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[10].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[10].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[11].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[11].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[11].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[12].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[12].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[12].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[13].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[13].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[13].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[14].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[14].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[14].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[15].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[15].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[15].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[16].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[16].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[16].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[17].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[17].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[17].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[18].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[18].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[18].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[19].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[19].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[19].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[1].d|    ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[1].d            ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[1].d|D_FF:d_ff  ; D_FF        ; work         ;
+;    |eD_FF:eachBit[20].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[20].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[20].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[21].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[21].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[21].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[22].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[22].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[22].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[23].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[23].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[23].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[24].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[24].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[24].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[25].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[25].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[25].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[26].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[26].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[26].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[27].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[27].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[27].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[28].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[28].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[28].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[29].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[29].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[29].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[2].d|    ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[2].d            ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[2].d|D_FF:d_ff  ; D_FF        ; work         ;
+;    |eD_FF:eachBit[30].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[30].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[30].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[31].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[31].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[31].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[32].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[32].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[32].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[33].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[33].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[33].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[34].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[34].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[34].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[35].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[35].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[35].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[36].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[36].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[36].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[37].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[37].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[37].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[38].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[38].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[38].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[39].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[39].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[39].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[3].d|    ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[3].d            ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[3].d|D_FF:d_ff  ; D_FF        ; work         ;
+;    |eD_FF:eachBit[40].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[40].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[40].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[41].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[41].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[41].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[42].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[42].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[42].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[43].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[43].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[43].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[44].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[44].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[44].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[45].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[45].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[45].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[46].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[46].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[46].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[47].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[47].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[47].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[48].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[48].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[48].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[49].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[49].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[49].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[4].d|    ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[4].d            ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[4].d|D_FF:d_ff  ; D_FF        ; work         ;
+;    |eD_FF:eachBit[50].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[50].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[50].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[51].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[51].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[51].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[52].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[52].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[52].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[53].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[53].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[53].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[54].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[54].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[54].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[55].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[55].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[55].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[56].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[56].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[56].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[57].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[57].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[57].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[58].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[58].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[58].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[59].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[59].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[59].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[5].d|    ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[5].d            ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[5].d|D_FF:d_ff  ; D_FF        ; work         ;
+;    |eD_FF:eachBit[60].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[60].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[60].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[61].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[61].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[61].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[62].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[62].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[62].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[63].d|   ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[63].d           ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[63].d|D_FF:d_ff ; D_FF        ; work         ;
+;    |eD_FF:eachBit[6].d|    ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[6].d            ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[6].d|D_FF:d_ff  ; D_FF        ; work         ;
+;    |eD_FF:eachBit[7].d|    ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[7].d            ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[7].d|D_FF:d_ff  ; D_FF        ; work         ;
+;    |eD_FF:eachBit[8].d|    ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[8].d            ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[8].d|D_FF:d_ff  ; D_FF        ; work         ;
+;    |eD_FF:eachBit[9].d|    ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[9].d            ; eD_FF       ; work         ;
+;       |D_FF:d_ff|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |register64|eD_FF:eachBit[9].d|D_FF:d_ff  ; D_FF        ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -222,14 +350,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 64    ;
+; Number of registers using Synchronous Clear  ; 64    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 64    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 3:1                ; 64 bits   ; 128 LEs       ; 0 LEs                ; 128 LEs                ; Yes        ; |register64|eD_FF:eachBit[0].d|D_FF:d_ff|q ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -237,15 +374,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1                           ;
-;     plain             ; 1                           ;
+; arriav_ff             ; 64                          ;
+;     ENA SCLR          ; 64                          ;
 ; arriav_lcell_comb     ; 1                           ;
 ;     normal            ; 1                           ;
-;         4 data inputs ; 1                           ;
-; boundary_port         ; 5                           ;
+;         2 data inputs ; 1                           ;
+; boundary_port         ; 131                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.83                        ;
+; Average LUT depth     ; 0.02                        ;
 +-----------------------+-----------------------------+
 
 
@@ -264,7 +401,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Oct 14 16:35:36 2021
+    Info: Processing started: Thu Oct 14 16:54:10 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Warning (12019): Can't analyze file -- file DE1_SoC.sv is missing
@@ -295,22 +432,26 @@ Info (12021): Found 2 design units, including 2 entities, in source file edecode
 Info (12021): Found 2 design units, including 2 entities, in source file ed_ff.sv
     Info (12023): Found entity 1: eD_FF File: C:/Users/hunte/Documents/EE469/Lab1/eD_FF.sv Line: 1
     Info (12023): Found entity 2: eD_FF_testbench File: C:/Users/hunte/Documents/EE469/Lab1/eD_FF.sv Line: 14
-Info (12127): Elaborating entity "eD_FF" for the top level hierarchy
-Info (12128): Elaborating entity "mux2_1" for hierarchy "mux2_1:m" File: C:/Users/hunte/Documents/EE469/Lab1/eD_FF.sv Line: 7
-Info (12128): Elaborating entity "D_FF" for hierarchy "D_FF:d_ff" File: C:/Users/hunte/Documents/EE469/Lab1/eD_FF.sv Line: 8
+Info (12021): Found 2 design units, including 2 entities, in source file register64.sv
+    Info (12023): Found entity 1: register64 File: C:/Users/hunte/Documents/EE469/Lab1/register64.sv Line: 1
+    Info (12023): Found entity 2: register64_testbench File: C:/Users/hunte/Documents/EE469/Lab1/register64.sv Line: 15
+Info (12127): Elaborating entity "register64" for the top level hierarchy
+Info (12128): Elaborating entity "eD_FF" for hierarchy "eD_FF:eachBit[0].d" File: C:/Users/hunte/Documents/EE469/Lab1/register64.sv Line: 9
+Info (12128): Elaborating entity "mux2_1" for hierarchy "eD_FF:eachBit[0].d|mux2_1:m" File: C:/Users/hunte/Documents/EE469/Lab1/eD_FF.sv Line: 7
+Info (12128): Elaborating entity "D_FF" for hierarchy "eD_FF:eachBit[0].d|D_FF:d_ff" File: C:/Users/hunte/Documents/EE469/Lab1/eD_FF.sv Line: 8
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/hunte/Documents/EE469/Lab1/output_files/DE1_SoC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 6 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 1 logic cells
+Info (21057): Implemented 196 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 67 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 65 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4843 megabytes
-    Info: Processing ended: Thu Oct 14 16:35:46 2021
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Thu Oct 14 16:54:20 2021
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+
