@@ -1,8 +1,23 @@
-|mux2_1
+|eD_FF
+clk => D_FF:d_ff.clk
+reset => D_FF:d_ff.reset
+en => en.IN1
+din => din.IN1
+dout <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eD_FF|mux2_1:m
 i0 => andR.IN0
 i1 => andL.IN0
 sel => andL.IN1
 sel => andR.IN1
-out << orF.DB_MAX_OUTPUT_PORT_TYPE
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eD_FF|D_FF:d_ff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q.DATAA
+reset => q.OUTPUTSELECT
+clk => q~reg0.CLK
 
 

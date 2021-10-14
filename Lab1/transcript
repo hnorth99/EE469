@@ -1,309 +1,158 @@
 # Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
-do edecoder5_32.do
+do eD_FF.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:24:54 on Oct 14,2021
-# vlog -reportprogress 300 ./edecoder2_4.sv 
-# -- Compiling module edecoder2_4
-# -- Compiling module edecoder2_4_testbench
+# Start time: 16:32:57 on Oct 14,2021
+# vlog -reportprogress 300 ./eD_FF.sv 
+# -- Compiling module eD_FF
+# -- Compiling module eD_FF_testbench
 # 
 # Top level modules:
-# 	edecoder2_4_testbench
-# End time: 10:24:54 on Oct 14,2021, Elapsed time: 0:00:00
+# 	eD_FF_testbench
+# End time: 16:32:58 on Oct 14,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:24:54 on Oct 14,2021
-# vlog -reportprogress 300 ./edecoder3_8.sv 
-# -- Compiling module edecoder3_8
-# -- Compiling module edecoder3_8_testbench
+# Start time: 16:32:58 on Oct 14,2021
+# vlog -reportprogress 300 ./D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module D_FF_testbench
 # 
 # Top level modules:
-# 	edecoder3_8_testbench
-# End time: 10:24:54 on Oct 14,2021, Elapsed time: 0:00:00
+# 	D_FF_testbench
+# End time: 16:32:58 on Oct 14,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:24:54 on Oct 14,2021
-# vlog -reportprogress 300 ./edecoder5_32.sv 
-# -- Compiling module edecoder5_32
-# -- Compiling module edecoder5_32_testbench
-# 
-# Top level modules:
-# 	edecoder5_32_testbench
-# End time: 10:24:54 on Oct 14,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder5_32_testbench 
-# Start time: 10:24:54 on Oct 14,2021
+# vsim -voptargs=""+acc"" -t 1ps -lib work eD_FF_testbench 
+# Start time: 16:32:58 on Oct 14,2021
 # Loading sv_std.std
-# Loading work.edecoder5_32_testbench
-# Loading work.edecoder5_32
-# Loading work.edecoder2_4
-# Loading work.edecoder3_8
-# ** Warning: (vsim-3015) ./edecoder5_32.sv(8): [PCDPC] - Port size (1) does not match connection size (32) for port 'e'. The port definition is at: ./edecoder2_4.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/s File: ./edecoder2_4.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'i2' not found in the connected module (1st connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'i1' not found in the connected module (2nd connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'i0' not found in the connected module (3rd connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o0' not found in the connected module (5th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o1' not found in the connected module (6th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o2' not found in the connected module (7th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o3' not found in the connected module (8th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o4' not found in the connected module (9th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o5' not found in the connected module (10th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o6' not found in the connected module (11th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o7' not found in the connected module (12th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Fatal: (vsim-3365) ./edecoder5_32.sv(11): Too many port connections. Expected 3, found 12.
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# FATAL ERROR while loading design
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./edecoder5_32.do PAUSED at line 14
-do edecoder5_32.do
+# Loading work.eD_FF_testbench
+# Loading work.eD_FF
+# Loading work.mux2_1
+# Loading work.D_FF
+add wave -position end  sim:/eD_FF_testbench/clk
+# ** Error: Cannot open macro file: eD_FF_wave.do
+# Error in macro ./eD_FF.do line 18
+# Cannot open macro file: eD_FF_wave.do
+#     while executing
+# "do eD_FF_wave.do"
+add wave -position end  sim:/eD_FF_testbench/din
+add wave -position end  sim:/eD_FF_testbench/en
+add wave -position 1  sim:/eD_FF_testbench/reset
+add wave -position end  sim:/eD_FF_testbench/dout
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/hunte/Documents/EE469/Lab1/eDFF_wave.do
+do eD_FF.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:25:42 on Oct 14,2021
-# vlog -reportprogress 300 ./edecoder2_4.sv 
-# -- Compiling module edecoder2_4
-# -- Compiling module edecoder2_4_testbench
+# Start time: 16:33:38 on Oct 14,2021
+# vlog -reportprogress 300 ./eD_FF.sv 
+# -- Compiling module eD_FF
+# -- Compiling module eD_FF_testbench
 # 
 # Top level modules:
-# 	edecoder2_4_testbench
-# End time: 10:25:42 on Oct 14,2021, Elapsed time: 0:00:00
+# 	eD_FF_testbench
+# End time: 16:33:38 on Oct 14,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:25:42 on Oct 14,2021
-# vlog -reportprogress 300 ./edecoder3_8.sv 
-# -- Compiling module edecoder3_8
-# -- Compiling module edecoder3_8_testbench
+# Start time: 16:33:38 on Oct 14,2021
+# vlog -reportprogress 300 ./D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module D_FF_testbench
 # 
 # Top level modules:
-# 	edecoder3_8_testbench
-# End time: 10:25:42 on Oct 14,2021, Elapsed time: 0:00:00
+# 	D_FF_testbench
+# End time: 16:33:38 on Oct 14,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:25:42 on Oct 14,2021
-# vlog -reportprogress 300 ./edecoder5_32.sv 
-# -- Compiling module edecoder5_32
-# -- Compiling module edecoder5_32_testbench
-# 
-# Top level modules:
-# 	edecoder5_32_testbench
-# End time: 10:25:42 on Oct 14,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder5_32_testbench 
-# Start time: 10:24:54 on Oct 14,2021
+# End time: 16:33:39 on Oct 14,2021, Elapsed time: 0:00:41
+# Errors: 3, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work eD_FF_testbench 
+# Start time: 16:33:39 on Oct 14,2021
 # Loading sv_std.std
-# Loading work.edecoder5_32_testbench
-# Loading work.edecoder5_32
-# Loading work.edecoder2_4
-# Loading work.edecoder3_8
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'i2' not found in the connected module (1st connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'i1' not found in the connected module (2nd connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'i0' not found in the connected module (3rd connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o0' not found in the connected module (5th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o1' not found in the connected module (6th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o2' not found in the connected module (7th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o3' not found in the connected module (8th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o4' not found in the connected module (9th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o5' not found in the connected module (10th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o6' not found in the connected module (11th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Error: (vsim-3389) ./edecoder5_32.sv(11): Port 'o7' not found in the connected module (12th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# ** Fatal: (vsim-3365) ./edecoder5_32.sv(11): Too many port connections. Expected 3, found 12.
-#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/d0 File: ./edecoder3_8.sv
-# FATAL ERROR while loading design
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./edecoder5_32.do PAUSED at line 14
-do edecoder5_32.do
+# Loading work.eD_FF_testbench
+# Loading work.eD_FF
+# Loading work.mux2_1
+# Loading work.D_FF
+# ** Error: Cannot open macro file: eD_FF_wave.do
+# Error in macro ./eD_FF.do line 18
+# Cannot open macro file: eD_FF_wave.do
+#     while executing
+# "do eD_FF_wave.do"
+add wave -position end  sim:/eD_FF_testbench/clk
+add wave -position end  sim:/eD_FF_testbench/clock_period
+add wave -position end  sim:/eD_FF_testbench/din
+add wave -position end  sim:/eD_FF_testbench/dout
+add wave -position end  sim:/eD_FF_testbench/en
+add wave -position end  sim:/eD_FF_testbench/reset
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/hunte/Documents/EE469/Lab1/eD_FF_wave.do
+do eD_FF.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:28:44 on Oct 14,2021
-# vlog -reportprogress 300 ./edecoder2_4.sv 
-# -- Compiling module edecoder2_4
-# -- Compiling module edecoder2_4_testbench
+# Start time: 16:34:20 on Oct 14,2021
+# vlog -reportprogress 300 ./eD_FF.sv 
+# -- Compiling module eD_FF
+# -- Compiling module eD_FF_testbench
 # 
 # Top level modules:
-# 	edecoder2_4_testbench
-# End time: 10:28:44 on Oct 14,2021, Elapsed time: 0:00:00
+# 	eD_FF_testbench
+# End time: 16:34:20 on Oct 14,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:28:44 on Oct 14,2021
-# vlog -reportprogress 300 ./edecoder3_8.sv 
-# -- Compiling module edecoder3_8
-# -- Compiling module edecoder3_8_testbench
+# Start time: 16:34:20 on Oct 14,2021
+# vlog -reportprogress 300 ./D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module D_FF_testbench
 # 
 # Top level modules:
-# 	edecoder3_8_testbench
-# End time: 10:28:44 on Oct 14,2021, Elapsed time: 0:00:00
+# 	D_FF_testbench
+# End time: 16:34:20 on Oct 14,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:28:44 on Oct 14,2021
-# vlog -reportprogress 300 ./edecoder5_32.sv 
-# -- Compiling module edecoder5_32
-# -- Compiling module edecoder5_32_testbench
-# 
-# Top level modules:
-# 	edecoder5_32_testbench
-# End time: 10:28:44 on Oct 14,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder5_32_testbench 
-# Start time: 10:24:54 on Oct 14,2021
+# End time: 16:34:20 on Oct 14,2021, Elapsed time: 0:00:41
+# Errors: 3, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work eD_FF_testbench 
+# Start time: 16:34:20 on Oct 14,2021
 # Loading sv_std.std
-# Loading work.edecoder5_32_testbench
-# Loading work.edecoder5_32
-# Loading work.edecoder2_4
-# Loading work.edecoder3_8
-# ** Error: evaluating expression "&{/edecoder5_32_testbench/i4, /edecoder5_32_testbench/i3, /edecoder5_32_testbench/i2, /edecoder5_32_testbench/i1, /edecoder5_32_testbench/i0 }"
-# No object found matching "i4" in context "/edecoder5_32_testbench".
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 2
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/input'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 4
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/i4'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 5
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/i3'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 6
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/i2'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 7
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/i1'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 8
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/i0'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 9
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o0'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 11
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o1'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 12
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o2'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 13
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o3'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 14
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o4'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 15
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o5'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 16
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o6'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 17
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o7'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 18
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o8'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 19
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o9'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 20
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o10'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 21
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o11'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 22
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o12'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 23
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o13'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 24
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o14'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 25
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o15'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 26
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o16'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 27
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o17'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 28
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o18'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 29
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o19'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 30
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o20'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 31
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o21'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 32
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o22'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 33
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o23'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 34
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o24'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 35
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o25'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 36
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o26'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 37
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o27'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 38
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o28'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 39
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o29'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 40
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o30'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 41
-# ** Error: (vish-4014) No objects found matching '/edecoder5_32_testbench/o31'.
-# Executing ONERROR command at macro ./edecoder5_32_wave.do line 42
+# Loading work.eD_FF_testbench
+# Loading work.eD_FF
+# Loading work.mux2_1
+# Loading work.D_FF
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-add wave -position 0  sim:/edecoder5_32_testbench/i
-add wave -position end  sim:/edecoder5_32_testbench/o
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/hunte/Documents/EE469/Lab1/edecoder5_32_wave.do
-do edecoder5_32.do
+# ** Note: $stop    : ./eD_FF.sv(38)
+#    Time: 1450 ps  Iteration: 1  Instance: /eD_FF_testbench
+# Break in Module eD_FF_testbench at ./eD_FF.sv line 38
+do eD_FF.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:29:24 on Oct 14,2021
-# vlog -reportprogress 300 ./edecoder2_4.sv 
-# -- Compiling module edecoder2_4
-# -- Compiling module edecoder2_4_testbench
+# Start time: 16:36:23 on Oct 14,2021
+# vlog -reportprogress 300 ./eD_FF.sv 
+# -- Compiling module eD_FF
+# -- Compiling module eD_FF_testbench
 # 
 # Top level modules:
-# 	edecoder2_4_testbench
-# End time: 10:29:24 on Oct 14,2021, Elapsed time: 0:00:00
+# 	eD_FF_testbench
+# End time: 16:36:23 on Oct 14,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:29:24 on Oct 14,2021
-# vlog -reportprogress 300 ./edecoder3_8.sv 
-# -- Compiling module edecoder3_8
-# -- Compiling module edecoder3_8_testbench
+# Start time: 16:36:23 on Oct 14,2021
+# vlog -reportprogress 300 ./D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module D_FF_testbench
 # 
 # Top level modules:
-# 	edecoder3_8_testbench
-# End time: 10:29:24 on Oct 14,2021, Elapsed time: 0:00:00
+# 	D_FF_testbench
+# End time: 16:36:23 on Oct 14,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:29:25 on Oct 14,2021
-# vlog -reportprogress 300 ./edecoder5_32.sv 
-# -- Compiling module edecoder5_32
-# -- Compiling module edecoder5_32_testbench
-# 
-# Top level modules:
-# 	edecoder5_32_testbench
-# End time: 10:29:25 on Oct 14,2021, Elapsed time: 0:00:00
+# End time: 16:36:24 on Oct 14,2021, Elapsed time: 0:02:04
 # Errors: 0, Warnings: 0
-# End time: 10:29:25 on Oct 14,2021, Elapsed time: 0:04:31
-# Errors: 140, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder5_32_testbench 
-# Start time: 10:29:25 on Oct 14,2021
+# vsim -voptargs=""+acc"" -t 1ps -lib work eD_FF_testbench 
+# Start time: 16:36:24 on Oct 14,2021
 # Loading sv_std.std
-# Loading work.edecoder5_32_testbench
-# Loading work.edecoder5_32
-# Loading work.edecoder2_4
-# Loading work.edecoder3_8
+# Loading work.eD_FF_testbench
+# Loading work.eD_FF
+# Loading work.mux2_1
+# Loading work.D_FF
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# End time: 10:30:16 on Oct 14,2021, Elapsed time: 0:00:51
-# Errors: 0, Warnings: 0
+# ** Note: $stop    : ./eD_FF.sv(38)
+#    Time: 1450 ps  Iteration: 1  Instance: /eD_FF_testbench
+# Break in Module eD_FF_testbench at ./eD_FF.sv line 38
