@@ -1,4 +1,5 @@
 module mux4_1(i00, i01, i10, i11, sel0, sel1, out);
+
 	input logic i00, i01, i10, i11, sel0, sel1;
 	output logic out;
 	
