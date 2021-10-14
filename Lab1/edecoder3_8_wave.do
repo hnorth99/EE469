@@ -1,17 +1,8 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /edecoder3_8_testbench/i2
-add wave -noupdate /edecoder3_8_testbench/i1
-add wave -noupdate /edecoder3_8_testbench/i0
+add wave -noupdate /edecoder3_8_testbench/i
 add wave -noupdate /edecoder3_8_testbench/e
-add wave -noupdate /edecoder3_8_testbench/o0
-add wave -noupdate /edecoder3_8_testbench/o1
-add wave -noupdate /edecoder3_8_testbench/o2
-add wave -noupdate /edecoder3_8_testbench/o3
-add wave -noupdate /edecoder3_8_testbench/o4
-add wave -noupdate /edecoder3_8_testbench/o5
-add wave -noupdate /edecoder3_8_testbench/o6
-add wave -noupdate /edecoder3_8_testbench/o7
+add wave -noupdate /edecoder3_8_testbench/o
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {0 ps} 0}
 quietly wave cursor active 0

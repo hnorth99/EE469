@@ -1,32 +1,36 @@
-module edecoder3_8(i2, i1, i0, e, o0, o1, o2, o3, o4, o5, o6, o7);
-	input logic i2, i1, i0, e;
-	output logic o0, o1, o2, o3, o4, o5, o6, o7;
+module edecoder3_8(i, e, o);
+	input logic [2:0] i;
+	input logic e;
+	output logic [7:0] o;
 	
-	logic t0, t1, t2, t3, t4, t5, t6, t7;
+	logic noti2;
+	not n (noti2, i[2]);
 	
-	edecoder2_4 ed0 (.i1(i1), .i0(i0), .e(~i2), .o0(t0), .o1(t1), .o2(t2), .o3(t3));
-	edecoder2_4 ed1 (.i1(i1), .i0(i0), .e(i2), .o0(t4), .o1(t5), .o2(t6), .o3(t7));
+	logic [7:0] t;
+	edecoder2_4 ed0 (.i1(i[1]), .i0(i[0]), .e(noti2), .o0(t[0]), 
+						  .o1(t[1]), .o2(t[2]), .o3(t[3]));
+	edecoder2_4 ed1 (.i1(i[1]), .i0(i[0]), .e(i[2]), .o0(t[4]), 
+						  .o1(t[5]), .o2(t[6]), .o3(t[7]));
 
-	and a0 (o0, e, t0);
-	and a1 (o1, e, t1);
-	and a2 (o2, e, t2);
-	and a3 (o3, e, t3);
-	and a4 (o4, e, t4);
-	and a5 (o5, e, t5);
-	and a6 (o6, e, t6);
-	and a7 (o7, e, t7);
+	genvar k;
+	generate
+		for (k = 0; k < 8; k++) begin : eachAND
+			and aGate (o[k], e, t[k]);
+		end
+	endgenerate
 endmodule
 
 module edecoder3_8_testbench();
-	logic i2, i1, i0, e;
-	logic o0, o1, o2, o3, o4, o5, o6, o7;
+	logic [2:0] i;
+	logic e;
+	logic [7:0] o;
 	
 	edecoder3_8 dut (.*);
 	
-	integer i;
+	integer k;
 	initial begin
-		for(i = 0; i < 16; i++) begin
-			{i2, i1, i0, e} = i; #10;
+		for(k = 0; k < 16; k++) begin
+			{i, e} = k; #10;
 		end
 	end
 endmodule

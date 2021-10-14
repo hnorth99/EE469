@@ -1,13 +1,6 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /mux16_1_testbench/i0
-add wave -noupdate /mux16_1_testbench/i2
-add wave -noupdate /mux16_1_testbench/i5
-add wave -noupdate /mux16_1_testbench/i7
-add wave -noupdate /mux16_1_testbench/i8
-add wave -noupdate /mux16_1_testbench/i10
-add wave -noupdate /mux16_1_testbench/i13
-add wave -noupdate /mux16_1_testbench/i15
+add wave -noupdate /mux16_1_testbench/i
 add wave -noupdate /mux16_1_testbench/sel3
 add wave -noupdate /mux16_1_testbench/sel2
 add wave -noupdate /mux16_1_testbench/sel1

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Wed Oct 13 23:42:14 2021
+Thu Oct 14 10:28:37 2021
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 13 23:42:14 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct 14 10:28:37 2021       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
 ; Top-level Entity Name           ; mux2_1                                      ;
@@ -258,7 +258,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Oct 13 23:42:04 2021
+    Info: Processing started: Thu Oct 14 10:28:27 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Warning (12019): Can't analyze file -- file DE1_SoC.sv is missing
@@ -270,10 +270,10 @@ Info (12021): Found 2 design units, including 2 entities, in source file mux4_1.
     Info (12023): Found entity 2: mux4_1_testbench File: C:/Users/hunte/Documents/EE469/Lab1/mux4_1.sv Line: 13
 Info (12021): Found 2 design units, including 2 entities, in source file mux16_1.sv
     Info (12023): Found entity 1: mux16_1 File: C:/Users/hunte/Documents/EE469/Lab1/mux16_1.sv Line: 1
-    Info (12023): Found entity 2: mux16_1_testbench File: C:/Users/hunte/Documents/EE469/Lab1/mux16_1.sv Line: 24
+    Info (12023): Found entity 2: mux16_1_testbench File: C:/Users/hunte/Documents/EE469/Lab1/mux16_1.sv Line: 21
 Info (12021): Found 2 design units, including 2 entities, in source file mux32_1.sv
     Info (12023): Found entity 1: mux32_1 File: C:/Users/hunte/Documents/EE469/Lab1/mux32_1.sv Line: 1
-    Info (12023): Found entity 2: mux32_1_testbench File: C:/Users/hunte/Documents/EE469/Lab1/mux32_1.sv Line: 29
+    Info (12023): Found entity 2: mux32_1_testbench File: C:/Users/hunte/Documents/EE469/Lab1/mux32_1.sv Line: 17
 Info (12021): Found 2 design units, including 2 entities, in source file d_ff.sv
     Info (12023): Found entity 1: D_FF File: C:/Users/hunte/Documents/EE469/Lab1/D_FF.sv Line: 1
     Info (12023): Found entity 2: D_FF_testbench File: C:/Users/hunte/Documents/EE469/Lab1/D_FF.sv Line: 12
@@ -282,10 +282,10 @@ Info (12021): Found 2 design units, including 2 entities, in source file edecode
     Info (12023): Found entity 2: edecoder2_4_testbench File: C:/Users/hunte/Documents/EE469/Lab1/edecoder2_4.sv Line: 15
 Info (12021): Found 2 design units, including 2 entities, in source file edecoder3_8.sv
     Info (12023): Found entity 1: edecoder3_8 File: C:/Users/hunte/Documents/EE469/Lab1/edecoder3_8.sv Line: 1
-    Info (12023): Found entity 2: edecoder3_8_testbench File: C:/Users/hunte/Documents/EE469/Lab1/edecoder3_8.sv Line: 20
+    Info (12023): Found entity 2: edecoder3_8_testbench File: C:/Users/hunte/Documents/EE469/Lab1/edecoder3_8.sv Line: 23
 Info (12021): Found 2 design units, including 2 entities, in source file edecoder5_32.sv
     Info (12023): Found entity 1: edecoder5_32 File: C:/Users/hunte/Documents/EE469/Lab1/edecoder5_32.sv Line: 1
-    Info (12023): Found entity 2: edecoder5_32_testbench File: C:/Users/hunte/Documents/EE469/Lab1/edecoder5_32.sv Line: 68
+    Info (12023): Found entity 2: edecoder5_32_testbench File: C:/Users/hunte/Documents/EE469/Lab1/edecoder5_32.sv Line: 28
 Info (12127): Elaborating entity "mux2_1" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/hunte/Documents/EE469/Lab1/output_files/DE1_SoC.map.smsg
@@ -296,10 +296,10 @@ Info (21057): Implemented 5 device resources after synthesis - the final resourc
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 1 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4825 megabytes
-    Info: Processing ended: Wed Oct 13 23:42:14 2021
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Thu Oct 14 10:28:37 2021
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +------------------------------------------+
