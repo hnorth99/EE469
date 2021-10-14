@@ -1,8 +1,13 @@
 module mux2_1(i0, i1, sel, out);
 	input logic i0, i1, sel;
 	output logic out;
-	
-	assign out = (i1 & sel) | (i0 & ~sel);
+
+	// out = (i1 & sel) | (i0 & ~sel);
+	logic tL, tR, selNot;
+	not n (selNot, sel);
+	and andL (tL, i1, sel);
+	and andR (tR, i0, selNot);
+	or orF (out, tL, tR);
 endmodule
 
 module mux2_1_testbench();

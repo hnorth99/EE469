@@ -8,27 +8,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "i00",
+					"name" : "i1",
 					"strict" : false
 				},
 				{
-					"name" : "i01",
+					"name" : "sel",
 					"strict" : false
 				},
 				{
-					"name" : "i10",
-					"strict" : false
-				},
-				{
-					"name" : "i11",
-					"strict" : false
-				},
-				{
-					"name" : "sel0",
-					"strict" : false
-				},
-				{
-					"name" : "sel1",
+					"name" : "i0",
 					"strict" : false
 				}
 			]

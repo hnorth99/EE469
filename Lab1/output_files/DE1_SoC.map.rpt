@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Wed Oct 13 18:27:34 2021
+Wed Oct 13 23:42:14 2021
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -44,14 +44,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 13 18:27:34 2021       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 13 23:42:14 2021       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
-; Top-level Entity Name           ; mux4_1                                      ;
+; Top-level Entity Name           ; mux2_1                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 7                                           ;
+; Total pins                      ; 4                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -70,7 +70,7 @@ agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; mux4_1             ; DE1_SoC            ;
+; Top-level entity name                                                           ; mux2_1             ; DE1_SoC            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; State Machine Processing                                                        ; User-Encoded       ; Auto               ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
@@ -173,35 +173,34 @@ agreement for further details.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                  ; Library ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------+---------+
 ; mux2_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/hunte/Documents/EE469/Lab1/mux2_1.sv ;         ;
-; mux4_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/hunte/Documents/EE469/Lab1/mux4_1.sv ;         ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1              ;
-;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1              ;
-;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 1              ;
-;     -- 5 input functions                    ; 0              ;
-;     -- 4 input functions                    ; 0              ;
-;     -- <=3 input functions                  ; 0              ;
-;                                             ;                ;
-; Dedicated logic registers                   ; 0              ;
-;                                             ;                ;
-; I/O pins                                    ; 7              ;
-;                                             ;                ;
-; Total DSP Blocks                            ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; mux2_1:m|out~0 ;
-; Maximum fan-out                             ; 1              ;
-; Total fan-out                               ; 14             ;
-; Average fan-out                             ; 0.93           ;
-+---------------------------------------------+----------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 1     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 1     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 1     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 4     ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; orF~0 ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 8     ;
+; Average fan-out                             ; 0.89  ;
++---------------------------------------------+-------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -209,8 +208,7 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |mux4_1                    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 7    ; 0            ; |mux4_1             ; mux4_1      ; work         ;
-;    |mux2_1:m|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mux4_1|mux2_1:m    ; mux2_1      ; work         ;
+; |mux2_1                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 4    ; 0            ; |mux2_1             ; mux2_1      ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -237,8 +235,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; arriav_lcell_comb     ; 1                           ;
 ;     normal            ; 1                           ;
-;         6 data inputs ; 1                           ;
-; boundary_port         ; 7                           ;
+;         3 data inputs ; 1                           ;
+; boundary_port         ; 4                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
 ; Average LUT depth     ; 1.00                        ;
@@ -260,13 +258,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Oct 13 18:27:24 2021
+    Info: Processing started: Wed Oct 13 23:42:04 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Warning (12019): Can't analyze file -- file DE1_SoC.sv is missing
 Info (12021): Found 2 design units, including 2 entities, in source file mux2_1.sv
     Info (12023): Found entity 1: mux2_1 File: C:/Users/hunte/Documents/EE469/Lab1/mux2_1.sv Line: 1
-    Info (12023): Found entity 2: mux2_1_testbench File: C:/Users/hunte/Documents/EE469/Lab1/mux2_1.sv Line: 8
+    Info (12023): Found entity 2: mux2_1_testbench File: C:/Users/hunte/Documents/EE469/Lab1/mux2_1.sv Line: 13
 Info (12021): Found 2 design units, including 2 entities, in source file mux4_1.sv
     Info (12023): Found entity 1: mux4_1 File: C:/Users/hunte/Documents/EE469/Lab1/mux4_1.sv Line: 1
     Info (12023): Found entity 2: mux4_1_testbench File: C:/Users/hunte/Documents/EE469/Lab1/mux4_1.sv Line: 13
@@ -276,25 +274,30 @@ Info (12021): Found 2 design units, including 2 entities, in source file mux16_1
 Info (12021): Found 2 design units, including 2 entities, in source file mux32_1.sv
     Info (12023): Found entity 1: mux32_1 File: C:/Users/hunte/Documents/EE469/Lab1/mux32_1.sv Line: 1
     Info (12023): Found entity 2: mux32_1_testbench File: C:/Users/hunte/Documents/EE469/Lab1/mux32_1.sv Line: 29
-Critical Warning (10846): Verilog HDL Instantiation warning at mux16_1.sv(13): instance has no name File: C:/Users/hunte/Documents/EE469/Lab1/mux16_1.sv Line: 13
-Critical Warning (10846): Verilog HDL Instantiation warning at mux16_1.sv(15): instance has no name File: C:/Users/hunte/Documents/EE469/Lab1/mux16_1.sv Line: 15
-Critical Warning (10846): Verilog HDL Instantiation warning at mux16_1.sv(17): instance has no name File: C:/Users/hunte/Documents/EE469/Lab1/mux16_1.sv Line: 17
-Critical Warning (10846): Verilog HDL Instantiation warning at mux16_1.sv(19): instance has no name File: C:/Users/hunte/Documents/EE469/Lab1/mux16_1.sv Line: 19
-Critical Warning (10846): Verilog HDL Instantiation warning at mux16_1.sv(21): instance has no name File: C:/Users/hunte/Documents/EE469/Lab1/mux16_1.sv Line: 21
-Critical Warning (10846): Verilog HDL Instantiation warning at mux32_1.sv(25): instance has no name File: C:/Users/hunte/Documents/EE469/Lab1/mux32_1.sv Line: 25
-Info (12127): Elaborating entity "mux4_1" for the top level hierarchy
-Info (12128): Elaborating entity "mux2_1" for hierarchy "mux2_1:m0" File: C:/Users/hunte/Documents/EE469/Lab1/mux4_1.sv Line: 8
+Info (12021): Found 2 design units, including 2 entities, in source file d_ff.sv
+    Info (12023): Found entity 1: D_FF File: C:/Users/hunte/Documents/EE469/Lab1/D_FF.sv Line: 1
+    Info (12023): Found entity 2: D_FF_testbench File: C:/Users/hunte/Documents/EE469/Lab1/D_FF.sv Line: 12
+Info (12021): Found 2 design units, including 2 entities, in source file edecoder2_4.sv
+    Info (12023): Found entity 1: edecoder2_4 File: C:/Users/hunte/Documents/EE469/Lab1/edecoder2_4.sv Line: 1
+    Info (12023): Found entity 2: edecoder2_4_testbench File: C:/Users/hunte/Documents/EE469/Lab1/edecoder2_4.sv Line: 15
+Info (12021): Found 2 design units, including 2 entities, in source file edecoder3_8.sv
+    Info (12023): Found entity 1: edecoder3_8 File: C:/Users/hunte/Documents/EE469/Lab1/edecoder3_8.sv Line: 1
+    Info (12023): Found entity 2: edecoder3_8_testbench File: C:/Users/hunte/Documents/EE469/Lab1/edecoder3_8.sv Line: 20
+Info (12021): Found 2 design units, including 2 entities, in source file edecoder5_32.sv
+    Info (12023): Found entity 1: edecoder5_32 File: C:/Users/hunte/Documents/EE469/Lab1/edecoder5_32.sv Line: 1
+    Info (12023): Found entity 2: edecoder5_32_testbench File: C:/Users/hunte/Documents/EE469/Lab1/edecoder5_32.sv Line: 68
+Info (12127): Elaborating entity "mux2_1" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/hunte/Documents/EE469/Lab1/output_files/DE1_SoC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 8 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
+Info (21057): Implemented 5 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 1 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4825 megabytes
-    Info: Processing ended: Wed Oct 13 18:27:34 2021
+    Info: Processing ended: Wed Oct 13 23:42:14 2021
     Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:19
 

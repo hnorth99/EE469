@@ -1,65 +1,173 @@
 # Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
-do runlab.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:43:02 on Oct 13,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# ** Error: ./mux2_1.sv(5): (vlog-2730) Undefined variable: 'io'.
-# ** Error: ./mux2_1.sv(1): Identifier must be declared with a port mode: io.
-# -- Compiling module mux2_1_testbench
-# End time: 11:43:03 on Oct 13,2021, Elapsed time: 0:00:01
-# Errors: 2, Warnings: 0
-# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 7
-# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./mux2_1.sv""
-do runlab.do
+do edecoder2_4.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:43:19 on Oct 13,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# ** Error: ./mux2_1.sv(5): (vlog-2730) Undefined variable: 'io'.
-# ** Error: ./mux2_1.sv(1): (vlog-2730) Undefined variable: 'i0s'.
-# ** Error: ./mux2_1.sv(1): Identifier must be declared with a port mode: i0s.
-# -- Compiling module mux2_1_testbench
-# End time: 11:43:19 on Oct 13,2021, Elapsed time: 0:00:00
+# Start time: 22:19:53 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 22:19:53 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder2_4_testbench 
+# Start time: 22:19:53 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.edecoder2_4_testbench
+# Loading work.edecoder2_4
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+do edecoder3_8.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:20:11 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 22:20:11 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:20:11 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder3_8.sv 
+# -- Compiling module edecoder3_8
+# -- Compiling module edecoder3_8_testbench
+# 
+# Top level modules:
+# 	edecoder3_8_testbench
+# End time: 22:20:11 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:20:12 on Oct 13,2021, Elapsed time: 0:00:19
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder3_8_testbench 
+# Start time: 22:20:12 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.edecoder3_8_testbench
+# Loading work.edecoder3_8
+# Loading work.edecoder2_4
+# ** Error: Cannot open macro file: edecoder3_8_wave.do
+# Error in macro ./edecoder3_8.do line 18
+# Cannot open macro file: edecoder3_8_wave.do
+#     while executing
+# "do edecoder3_8_wave.do"
+add wave -position end  sim:/edecoder3_8_testbench/i2
+add wave -position end  sim:/edecoder3_8_testbench/i1
+add wave -position end  sim:/edecoder3_8_testbench/i0
+add wave -position end  sim:/edecoder3_8_testbench/o0
+add wave -position end  sim:/edecoder3_8_testbench/o1
+add wave -position end  sim:/edecoder3_8_testbench/o2
+add wave -position end  sim:/edecoder3_8_testbench/o3
+add wave -position end  sim:/edecoder3_8_testbench/o4
+add wave -position end  sim:/edecoder3_8_testbench/o5
+add wave -position end  sim:/edecoder3_8_testbench/o6
+add wave -position end  sim:/edecoder3_8_testbench/o7
+add wave -position 3  sim:/edecoder3_8_testbench/e
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/hunte/Documents/EE469/Lab1/edecoder3_8_wave.do
+do edecoder3_8.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:20:57 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 22:20:57 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:20:57 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder3_8.sv 
+# -- Compiling module edecoder3_8
+# -- Compiling module edecoder3_8_testbench
+# 
+# Top level modules:
+# 	edecoder3_8_testbench
+# End time: 22:20:57 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:20:58 on Oct 13,2021, Elapsed time: 0:00:46
 # Errors: 3, Warnings: 0
-# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 7
-# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./mux2_1.sv""
-do runlab.do
+# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder3_8_testbench 
+# Start time: 22:20:58 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.edecoder3_8_testbench
+# Loading work.edecoder3_8
+# Loading work.edecoder2_4
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+do AND_2.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:43:35 on Oct 13,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# ** Error: ./mux2_1.sv(5): (vlog-2730) Undefined variable: 'io'.
-# -- Compiling module mux2_1_testbench
-# End time: 11:43:35 on Oct 13,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 7
-# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Start time: 22:42:16 on Oct 13,2021
+# vlog -reportprogress 300 ./AND_2.sv 
+# -- Compiling module AND_2
+# -- Compiling module AND_2_testbench
+# 
+# Top level modules:
+# 	AND_2
+# 	AND_2_testbench
+# End time: 22:42:16 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:42:17 on Oct 13,2021, Elapsed time: 0:21:19
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work AND_2_testbench 
+# Start time: 22:42:17 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.AND_2_testbench
+# ** Error: Cannot open macro file: AND_2_wave.do
+# Error in macro ./AND_2.do line 17
+# Cannot open macro file: AND_2_wave.do
 #     while executing
-# "vlog "./mux2_1.sv""
-do runlab.do
+# "do AND_2_wave.do"
+add wave -position end  sim:/AND_2_testbench/i0
+add wave -position end  sim:/AND_2_testbench/i1
+add wave -position end  sim:/AND_2_testbench/out
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/hunte/Documents/EE469/Lab1/AND_2_wave.do
+DO AND_2.do
+# invalid command name "DO"
+do AND_2.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:43:53 on Oct 13,2021
+# Start time: 22:42:58 on Oct 13,2021
+# vlog -reportprogress 300 ./AND_2.sv 
+# -- Compiling module AND_2
+# -- Compiling module AND_2_testbench
+# 
+# Top level modules:
+# 	AND_2
+# 	AND_2_testbench
+# End time: 22:42:58 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:42:58 on Oct 13,2021, Elapsed time: 0:00:41
+# Errors: 4, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work AND_2_testbench 
+# Start time: 22:42:58 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.AND_2_testbench
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+do mux2_1.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:58 on Oct 13,2021
 # vlog -reportprogress 300 ./mux2_1.sv 
 # -- Compiling module mux2_1
 # -- Compiling module mux2_1_testbench
 # 
 # Top level modules:
 # 	mux2_1_testbench
-# End time: 11:43:53 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 22:49:58 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:49:59 on Oct 13,2021, Elapsed time: 0:07:01
 # Errors: 0, Warnings: 0
 # vsim -voptargs=""+acc"" -t 1ps -lib work mux2_1_testbench 
-# Start time: 11:44:01 on Oct 13,2021
+# Start time: 22:49:59 on Oct 13,2021
 # Loading sv_std.std
 # Loading work.mux2_1_testbench
 # Loading work.mux2_1
@@ -69,89 +177,19 @@ do runlab.do
 do mux4_1.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:14:48 on Oct 13,2021
-# vlog -reportprogress 300 ./mux4_1.sv 
-# -- Compiling module mux4_1
-# ** Error: ./mux4_1.sv(1): (vlog-2730) Undefined variable: 'isel0'.
-# ** Error: ./mux4_1.sv(1): Identifier must be declared with a port mode: isel0.
-# ** Error: ./mux4_1.sv(1): (vlog-2730) Undefined variable: 'isel11'.
-# ** Error: ./mux4_1.sv(1): Identifier must be declared with a port mode: isel11.
-# -- Compiling module mux4_1_testbench
-# ** Error: ./mux4_1.sv(16): (vlog-2730) Undefined variable: 'isel0'.
-# ** Error: ./mux4_1.sv(16): (vlog-2730) Undefined variable: 'isel11'.
-# End time: 12:14:48 on Oct 13,2021, Elapsed time: 0:00:00
-# Errors: 6, Warnings: 0
-# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./mux4_1.do line 7
-# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./mux4_1.sv""
-do mux4_1.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:16:02 on Oct 13,2021
-# vlog -reportprogress 300 ./mux4_1.sv 
-# -- Compiling module mux4_1
-# -- Compiling module mux4_1_testbench
-# ** Error: ./mux4_1.sv(16): (vlog-2730) Undefined variable: 'isel0'.
-# ** Error: ./mux4_1.sv(16): (vlog-2730) Undefined variable: 'isel11'.
-# End time: 12:16:02 on Oct 13,2021, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./mux4_1.do line 7
-# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./mux4_1.sv""
-do mux4_1.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:16:31 on Oct 13,2021
+# Start time: 22:50:46 on Oct 13,2021
 # vlog -reportprogress 300 ./mux4_1.sv 
 # -- Compiling module mux4_1
 # -- Compiling module mux4_1_testbench
 # 
 # Top level modules:
 # 	mux4_1_testbench
-# End time: 12:16:31 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 22:50:46 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 12:16:32 on Oct 13,2021, Elapsed time: 0:32:31
-# Errors: 14, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work mux4_1_testbench 
-# Start time: 12:16:32 on Oct 13,2021
-# Loading sv_std.std
-# Loading work.mux4_1_testbench
-# Loading work.mux4_1
-# Loading work.mux2_1
-# ** Error: Cannot open macro file: mux4_1_wave.do
-# Error in macro ./mux4_1.do line 17
-# Cannot open macro file: mux4_1_wave.do
-#     while executing
-# "do mux4_1_wave.do"
-add wave -position end  sim:/mux4_1_testbench/i
-add wave -position end  sim:/mux4_1_testbench/i00
-add wave -position end  sim:/mux4_1_testbench/i01
-add wave -position end  sim:/mux4_1_testbench/i10
-add wave -position end  sim:/mux4_1_testbench/i11
-add wave -position end  sim:/mux4_1_testbench/out
-add wave -position end  sim:/mux4_1_testbench/sel0
-add wave -position end  sim:/mux4_1_testbench/sel1
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/hunte/Documents/EE469/Lab1/mux4_1_wave.do
-do mux4_1.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:18:49 on Oct 13,2021
-# vlog -reportprogress 300 ./mux4_1.sv 
-# -- Compiling module mux4_1
-# -- Compiling module mux4_1_testbench
-# 
-# Top level modules:
-# 	mux4_1_testbench
-# End time: 12:18:49 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 22:50:47 on Oct 13,2021, Elapsed time: 0:00:48
 # Errors: 0, Warnings: 0
-# End time: 12:18:50 on Oct 13,2021, Elapsed time: 0:02:18
-# Errors: 3, Warnings: 0
 # vsim -voptargs=""+acc"" -t 1ps -lib work mux4_1_testbench 
-# Start time: 12:18:50 on Oct 13,2021
+# Start time: 22:50:47 on Oct 13,2021
 # Loading sv_std.std
 # Loading work.mux4_1_testbench
 # Loading work.mux4_1
@@ -159,29 +197,616 @@ do mux4_1.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/hunte/Documents/EE469/Lab1/mux4_1_wave.do
-do mux4_1.do
+do mux16_1.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:20:09 on Oct 13,2021
+# Start time: 22:51:14 on Oct 13,2021
+# vlog -reportprogress 300 ./mux16_1.sv 
+# -- Compiling module mux16_1
+# -- Compiling module mux16_1_testbench
+# 
+# Top level modules:
+# 	mux16_1_testbench
+# End time: 22:51:14 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:51:14 on Oct 13,2021
 # vlog -reportprogress 300 ./mux4_1.sv 
 # -- Compiling module mux4_1
 # -- Compiling module mux4_1_testbench
 # 
 # Top level modules:
 # 	mux4_1_testbench
-# End time: 12:20:09 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 22:51:14 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 12:20:10 on Oct 13,2021, Elapsed time: 0:01:20
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:51:14 on Oct 13,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 22:51:14 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work mux4_1_testbench 
-# Start time: 12:20:10 on Oct 13,2021
+# End time: 22:51:15 on Oct 13,2021, Elapsed time: 0:00:28
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux16_1_testbench 
+# Start time: 22:51:15 on Oct 13,2021
 # Loading sv_std.std
-# Loading work.mux4_1_testbench
+# Loading work.mux16_1_testbench
+# Loading work.mux16_1
 # Loading work.mux4_1
 # Loading work.mux2_1
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# End time: 12:24:29 on Oct 13,2021, Elapsed time: 0:04:19
+do mux32_1.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:51:22 on Oct 13,2021
+# vlog -reportprogress 300 ./mux32_1.sv 
+# -- Compiling module mux32_1
+# -- Compiling module mux32_1_testbench
+# 
+# Top level modules:
+# 	mux32_1_testbench
+# End time: 22:51:22 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:51:22 on Oct 13,2021
+# vlog -reportprogress 300 ./mux16_1.sv 
+# -- Compiling module mux16_1
+# -- Compiling module mux16_1_testbench
+# 
+# Top level modules:
+# 	mux16_1_testbench
+# End time: 22:51:22 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:51:22 on Oct 13,2021
+# vlog -reportprogress 300 ./mux4_1.sv 
+# -- Compiling module mux4_1
+# -- Compiling module mux4_1_testbench
+# 
+# Top level modules:
+# 	mux4_1_testbench
+# End time: 22:51:22 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:51:22 on Oct 13,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 22:51:22 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:51:23 on Oct 13,2021, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux32_1_testbench 
+# Start time: 22:51:23 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.mux32_1_testbench
+# Loading work.mux32_1
+# Loading work.mux16_1
+# Loading work.mux4_1
+# Loading work.mux2_1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+edecoder2_4.do
+# couldn't execute ".\edecoder2_4.do": no such file or directory
+do edecoder2_4.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:54:36 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 22:54:36 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:54:37 on Oct 13,2021, Elapsed time: 0:03:14
+# Errors: 1, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder2_4_testbench 
+# Start time: 22:54:37 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.edecoder2_4_testbench
+# Loading work.edecoder2_4
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+do edecoder2_4.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:56:39 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 22:56:39 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:56:40 on Oct 13,2021, Elapsed time: 0:02:03
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder2_4_testbench 
+# Start time: 22:56:40 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.edecoder2_4_testbench
+# Loading work.edecoder2_4
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+edecoder3_8.do
+# couldn't execute ".\edecoder3_8.do": no such file or directory
+do edecoder2_4.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:56:56 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 22:56:56 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:56:57 on Oct 13,2021, Elapsed time: 0:00:17
+# Errors: 1, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder2_4_testbench 
+# Start time: 22:56:57 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.edecoder2_4_testbench
+# Loading work.edecoder2_4
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+do edecoder3_8.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:57:06 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 22:57:06 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:57:06 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder3_8.sv 
+# -- Compiling module edecoder3_8
+# -- Compiling module edecoder3_8_testbench
+# 
+# Top level modules:
+# 	edecoder3_8_testbench
+# End time: 22:57:06 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:57:07 on Oct 13,2021, Elapsed time: 0:00:10
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder3_8_testbench 
+# Start time: 22:57:07 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.edecoder3_8_testbench
+# Loading work.edecoder3_8
+# Loading work.edecoder2_4
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+do edecoder3_8.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:59:34 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 22:59:34 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:59:34 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder3_8.sv 
+# -- Compiling module edecoder3_8
+# -- Compiling module edecoder3_8_testbench
+# 
+# Top level modules:
+# 	edecoder3_8_testbench
+# End time: 22:59:34 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:59:35 on Oct 13,2021, Elapsed time: 0:02:28
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder3_8_testbench 
+# Start time: 22:59:35 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.edecoder3_8_testbench
+# Loading work.edecoder3_8
+# Loading work.edecoder2_4
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+do edecoder5_32.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:34:54 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 23:34:54 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:34:54 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder3_8.sv 
+# -- Compiling module edecoder3_8
+# -- Compiling module edecoder3_8_testbench
+# 
+# Top level modules:
+# 	edecoder3_8_testbench
+# End time: 23:34:54 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:34:54 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder5_32.sv 
+# -- Compiling module edecoder5_32
+# ** Error: (vlog-13069) ./edecoder5_32.sv(19): near ".": syntax error, unexpected '.', expecting ')'.
+# -- Compiling module edecoder5_32_testbench
+# End time: 23:34:54 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./edecoder5_32.do line 9
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./edecoder5_32.sv""
+do edecoder5_32.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:35:47 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 23:35:48 on Oct 13,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:35:48 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder3_8.sv 
+# -- Compiling module edecoder3_8
+# -- Compiling module edecoder3_8_testbench
+# 
+# Top level modules:
+# 	edecoder3_8_testbench
+# End time: 23:35:48 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:35:48 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder5_32.sv 
+# -- Compiling module edecoder5_32
+# ** Error: ./edecoder5_32.sv(19): 'e' already declared in this scope.
+# -- Compiling module edecoder5_32_testbench
+# End time: 23:35:48 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./edecoder5_32.do line 9
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./edecoder5_32.sv""
+do edecoder5_32.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:37:40 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 23:37:40 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:37:40 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder3_8.sv 
+# -- Compiling module edecoder3_8
+# -- Compiling module edecoder3_8_testbench
+# 
+# Top level modules:
+# 	edecoder3_8_testbench
+# End time: 23:37:40 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:37:40 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder5_32.sv 
+# -- Compiling module edecoder5_32
+# ** Error: ./edecoder5_32.sv(19): 'e' already declared in this scope.
+# -- Compiling module edecoder5_32_testbench
+# End time: 23:37:40 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./edecoder5_32.do line 9
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./edecoder5_32.sv""
+do edecoder5_32.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:39:01 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 23:39:01 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:39:01 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder3_8.sv 
+# -- Compiling module edecoder3_8
+# -- Compiling module edecoder3_8_testbench
+# 
+# Top level modules:
+# 	edecoder3_8_testbench
+# End time: 23:39:01 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:39:01 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder5_32.sv 
+# -- Compiling module edecoder5_32
+# -- Compiling module edecoder5_32_testbench
+# 
+# Top level modules:
+# 	edecoder5_32_testbench
+# End time: 23:39:01 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:39:02 on Oct 13,2021, Elapsed time: 0:39:27
+# Errors: 12, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder5_32_testbench 
+# Start time: 23:39:02 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.edecoder5_32_testbench
+# Loading work.edecoder5_32
+# Loading work.edecoder2_4
+# Loading work.edecoder3_8
+# ** Warning: (vsim-3015) ./edecoder5_32.sv(18): [PCDPC] - Port size (1) does not match connection size (32) for port 'e'. The port definition is at: ./edecoder2_4.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/s File: ./edecoder2_4.sv
+# ** Error: Cannot open macro file: edecoder5_32_wave.do
+# Error in macro ./edecoder5_32.do line 19
+# Cannot open macro file: edecoder5_32_wave.do
+#     while executing
+# "do edecoder5_32_wave.do"
+add wave -position end  sim:/edecoder5_32_testbench/e
+add wave -position end  sim:/edecoder5_32_testbench/i4
+add wave -position end  sim:/edecoder5_32_testbench/i3
+add wave -position end  sim:/edecoder5_32_testbench/i2
+add wave -position end  sim:/edecoder5_32_testbench/i1
+add wave -position end  sim:/edecoder5_32_testbench/i0
+add wave -position end  sim:/edecoder5_32_testbench/o0
+add wave -position end  sim:/edecoder5_32_testbench/o1
+add wave -position end  sim:/edecoder5_32_testbench/o2
+add wave -position end  sim:/edecoder5_32_testbench/o3
+add wave -position end  sim:/edecoder5_32_testbench/o4
+add wave -position end  sim:/edecoder5_32_testbench/o5
+add wave -position end  sim:/edecoder5_32_testbench/o6
+add wave -position end  sim:/edecoder5_32_testbench/o7
+add wave -position end  sim:/edecoder5_32_testbench/o8
+add wave -position end  sim:/edecoder5_32_testbench/o9
+add wave -position end  sim:/edecoder5_32_testbench/o10
+add wave -position end  sim:/edecoder5_32_testbench/o11
+add wave -position end  sim:/edecoder5_32_testbench/o12
+add wave -position end  sim:/edecoder5_32_testbench/o13
+add wave -position end  sim:/edecoder5_32_testbench/o14
+add wave -position end  sim:/edecoder5_32_testbench/o15
+add wave -position end  sim:/edecoder5_32_testbench/o16
+add wave -position end  sim:/edecoder5_32_testbench/o17
+add wave -position end  sim:/edecoder5_32_testbench/o18
+add wave -position end  sim:/edecoder5_32_testbench/o19
+add wave -position end  sim:/edecoder5_32_testbench/o20
+add wave -position end  sim:/edecoder5_32_testbench/o21
+add wave -position end  sim:/edecoder5_32_testbench/o22
+add wave -position end  sim:/edecoder5_32_testbench/o23
+add wave -position end  sim:/edecoder5_32_testbench/o24
+add wave -position end  sim:/edecoder5_32_testbench/o25
+add wave -position end  sim:/edecoder5_32_testbench/o26
+add wave -position end  sim:/edecoder5_32_testbench/o27
+add wave -position end  sim:/edecoder5_32_testbench/o28
+add wave -position end  sim:/edecoder5_32_testbench/o29
+add wave -position end  sim:/edecoder5_32_testbench/o30
+add wave -position end  sim:/edecoder5_32_testbench/o31
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/hunte/Documents/EE469/Lab1/edecoder5_32_wave.do
+do edecoder5_32.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:41:05 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 23:41:05 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:41:05 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder3_8.sv 
+# -- Compiling module edecoder3_8
+# -- Compiling module edecoder3_8_testbench
+# 
+# Top level modules:
+# 	edecoder3_8_testbench
+# End time: 23:41:05 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:41:05 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder5_32.sv 
+# -- Compiling module edecoder5_32
+# -- Compiling module edecoder5_32_testbench
+# 
+# Top level modules:
+# 	edecoder5_32_testbench
+# End time: 23:41:05 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:41:06 on Oct 13,2021, Elapsed time: 0:02:04
+# Errors: 3, Warnings: 1
+# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder5_32_testbench 
+# Start time: 23:41:06 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.edecoder5_32_testbench
+# Loading work.edecoder5_32
+# Loading work.edecoder2_4
+# Loading work.edecoder3_8
+# ** Warning: (vsim-3015) ./edecoder5_32.sv(18): [PCDPC] - Port size (1) does not match connection size (32) for port 'e'. The port definition is at: ./edecoder2_4.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/s File: ./edecoder2_4.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+do edecoder5_32.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:42:11 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 23:42:11 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:42:11 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder3_8.sv 
+# -- Compiling module edecoder3_8
+# -- Compiling module edecoder3_8_testbench
+# 
+# Top level modules:
+# 	edecoder3_8_testbench
+# End time: 23:42:11 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:42:11 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder5_32.sv 
+# -- Compiling module edecoder5_32
+# -- Compiling module edecoder5_32_testbench
+# 
+# Top level modules:
+# 	edecoder5_32_testbench
+# End time: 23:42:11 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:42:12 on Oct 13,2021, Elapsed time: 0:01:06
+# Errors: 0, Warnings: 1
+# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder5_32_testbench 
+# Start time: 23:42:12 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.edecoder5_32_testbench
+# Loading work.edecoder5_32
+# Loading work.edecoder2_4
+# Loading work.edecoder3_8
+# ** Warning: (vsim-3015) ./edecoder5_32.sv(18): [PCDPC] - Port size (1) does not match connection size (32) for port 'e'. The port definition is at: ./edecoder2_4.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/s File: ./edecoder2_4.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+do edecoder5_32.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:42:31 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 23:42:32 on Oct 13,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:42:32 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder3_8.sv 
+# -- Compiling module edecoder3_8
+# -- Compiling module edecoder3_8_testbench
+# 
+# Top level modules:
+# 	edecoder3_8_testbench
+# End time: 23:42:32 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:42:32 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder5_32.sv 
+# -- Compiling module edecoder5_32
+# -- Compiling module edecoder5_32_testbench
+# 
+# Top level modules:
+# 	edecoder5_32_testbench
+# End time: 23:42:32 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:42:33 on Oct 13,2021, Elapsed time: 0:00:21
+# Errors: 0, Warnings: 1
+# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder5_32_testbench 
+# Start time: 23:42:33 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.edecoder5_32_testbench
+# Loading work.edecoder5_32
+# Loading work.edecoder2_4
+# Loading work.edecoder3_8
+# ** Warning: (vsim-3015) ./edecoder5_32.sv(18): [PCDPC] - Port size (1) does not match connection size (32) for port 'e'. The port definition is at: ./edecoder2_4.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/s File: ./edecoder2_4.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+do edecoder5_32.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:44:38 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder2_4.sv 
+# -- Compiling module edecoder2_4
+# -- Compiling module edecoder2_4_testbench
+# 
+# Top level modules:
+# 	edecoder2_4_testbench
+# End time: 23:44:38 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:44:38 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder3_8.sv 
+# -- Compiling module edecoder3_8
+# -- Compiling module edecoder3_8_testbench
+# 
+# Top level modules:
+# 	edecoder3_8_testbench
+# End time: 23:44:38 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:44:38 on Oct 13,2021
+# vlog -reportprogress 300 ./edecoder5_32.sv 
+# -- Compiling module edecoder5_32
+# -- Compiling module edecoder5_32_testbench
+# 
+# Top level modules:
+# 	edecoder5_32_testbench
+# End time: 23:44:38 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:44:39 on Oct 13,2021, Elapsed time: 0:02:06
+# Errors: 0, Warnings: 1
+# vsim -voptargs=""+acc"" -t 1ps -lib work edecoder5_32_testbench 
+# Start time: 23:44:39 on Oct 13,2021
+# Loading sv_std.std
+# Loading work.edecoder5_32_testbench
+# Loading work.edecoder5_32
+# Loading work.edecoder2_4
+# Loading work.edecoder3_8
+# ** Warning: (vsim-3015) ./edecoder5_32.sv(18): [PCDPC] - Port size (1) does not match connection size (32) for port 'e'. The port definition is at: ./edecoder2_4.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /edecoder5_32_testbench/dut/s File: ./edecoder2_4.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# End time: 23:45:05 on Oct 13,2021, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 1
