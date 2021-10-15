@@ -7,7 +7,7 @@ module register64_32x(clk, reset, din, en, dout);
 	genvar i;
 	generate
 		for (i = 0; i < 31; i++) begin : eachRegister
-			register64 register (.clk, .reset, .en(en[i]), .din(din[i]), .dout(dout[i]));
+			register64 register (.clk, .reset, .en(en[i]), .din, .dout(dout[i]));
 		end
 	endgenerate
 	
