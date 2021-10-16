@@ -1,3 +1,9 @@
+`timescale 1ps/1ps
+// This builds a unit of 32 64 bit registers out of the register64 unit.
+// The last register (31) will always be set to zero.
+// Unit recieves a clk and reset to coordinate timing. One 64 bit word can 
+// be sent into the register selected in the 32 bit en input. Outputs all info
+// onto the 32 by 64 dout.
 module register64_32x(clk, reset, din, en, dout);
 	input logic clk, reset;
 	input logic [31:0] en;
@@ -11,7 +17,8 @@ module register64_32x(clk, reset, din, en, dout);
 		end
 	endgenerate
 	
-	register64 zero_register (.clk, .reset, .en(0), .din(0), .dout(dout[31]));
+	// Keep 31 at zero
+	register64 zero_register (.clk, .reset, .en(1'b1), .din(64'd0), .dout(dout[31]));
 	
 endmodule
 

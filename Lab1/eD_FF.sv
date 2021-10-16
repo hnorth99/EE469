@@ -1,3 +1,7 @@
+`timescale 1ps/1ps
+// This builds a D_FF with an enabler. A new bit will be loaded
+// into the register (via din) only when the en bit is high. Bit stored
+// in eDFF is outputed to dout
 module eD_FF(clk, reset, en, din, dout);
 	input logic clk, reset, en, din;
 	output logic dout;

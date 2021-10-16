@@ -1,3 +1,9 @@
+`timescale 1ps/1ps
+// This unit builds a 64 bit register out of 64 individual eD_FFs.
+// Recieves a clock and reset to coordinate operation within unit.
+// Additionally takes a 64 bit input (din) that will be loaded into 
+// the register when the en bit is high. Output of register is projected
+// onto dout.
 module register64 (clk, reset, din, en, dout);
 	input logic clk, reset, en;
 	input logic [63:0] din;

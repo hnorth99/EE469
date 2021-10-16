@@ -1,3 +1,7 @@
+`timescale 1ps/1ps
+// This builds a 16 to 1 mux out of 5 4 to 1 muxs.
+// Receives 16 input lines that are toggled onto the output
+// line by the 4 bit sel input.
 module mux16_1(i, sel0, sel1, sel2, sel3, out);
 					
 	input logic [15:0] i;
@@ -27,50 +31,50 @@ module mux16_1_testbench();
 	
 	initial begin
 		// Set all to zero
-		{i, sel0, sel1, sel2, sel3} = 0; 		#10;
+		{i, sel0, sel1, sel2, sel3} = 0; 		#100;
 	
 		// Mux 1 tests
 		// Test 0th entry in mux 1 -> OVERALL ENTRY 0
 		{sel3, sel2, sel1, sel0} = 0;
-		i[0] = 1; 											#10;
-		i[0] = 0; 											#10;
+		i[0] = 1; 											#100;
+		i[0] = 0; 											#100;
 		// Test 2nd entry in mux 1 -> OVERALL ENTRY 2
 		{sel3, sel2, sel1, sel0} = 2;
-		i[2] = 1; 											#10;
-		i[2] = 0; 											#10;
+		i[2] = 1; 											#100;
+		i[2] = 0; 											#100;
 		// End Mux 1 tests
 		
 		// Mux 2 tests
 		// Test 1st entry in mux 2 -> OVERALL ENTRY 5
 		{sel3, sel2, sel1, sel0} = 5;
-		i[5] = 1; 											#10;
-		i[5] = 0;											#10;
+		i[5] = 1; 											#100;
+		i[5] = 0;											#100;
 		// Test 3rd entry in mux 2 -> OVERALL ENTRY 7
 		{sel3, sel2, sel1, sel0} = 7;
-		i[7] = 1; 											#10;
-		i[7] = 0; 											#10;
+		i[7] = 1; 											#100;
+		i[7] = 0; 											#100;
 		// End Mux 2 tests
 		
 		// Mux 3 tests
 		// Test 0th entry in mux 3 -> OVERALL ENTRY 8
 		{sel3, sel2, sel1, sel0} = 8;
-		i[8] = 1; 											#10;
-		i[8] = 0; 											#10;
+		i[8] = 1; 											#100;
+		i[8] = 0; 											#100;
 		// Test 2nd entry in mux 3 -> OVERALL ENTRY 10
 		{sel3, sel2, sel1, sel0} = 10;
-		i[10] = 1; 										#10;
-		i[10] = 0;											#10;
+		i[10] = 1; 										#100;
+		i[10] = 0;											#100;
 		// End Mux 3 tests
 		
 		// Mux 4 tests
 		// Test 1st entry in mux 4 -> OVERALL ENTRY 13
 		{sel3, sel2, sel1, sel0} = 13;
-		i[13] = 1; 										#10;
-		i[13] = 0; 										#10;
+		i[13] = 1; 										#100;
+		i[13] = 0; 										#100;
 		// Test 4th entry in mux 4 -> OVERALL ENTRY 15
 		{sel0, sel1, sel2, sel3} = 15;
-		i[15] = 1; 										#10;
-		i[15] = 0;											#10;
+		i[15] = 1; 										#100;
+		i[15] = 0;											#100;
 		// End Mux 4 tests
 	end
 endmodule

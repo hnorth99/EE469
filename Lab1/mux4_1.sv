@@ -1,3 +1,7 @@
+`timescale 1ps/1ps
+// This builds a 4 to 1 mux using 2 2 to 1 muxs.
+// Receives 4 input lines that are toggled onto the output
+// line by the 2 bit sel input.
 module mux4_1(i00, i01, i10, i11, sel0, sel1, out);
 
 	input logic i00, i01, i10, i11, sel0, sel1;
@@ -19,7 +23,7 @@ module mux4_1_testbench();
 	integer i;
 	initial begin
 		for(i = 0; i < 64; i++) begin
-			{sel1, sel0, i00, i01, i10, i11} = i; #10;
+			{sel1, sel0, i00, i01, i10, i11} = i; #100;
 		end
 	end
 endmodule
