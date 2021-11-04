@@ -1,0 +1,548 @@
+Analysis & Synthesis report for DE1_SoC
+Wed Oct 27 20:58:19 2021
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Oct 27 20:58:19 2021       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; DE1_SoC                                     ;
+; Top-level Entity Name           ; add_sub_64                                  ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 195                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; add_sub_64         ; DE1_SoC            ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; State Machine Processing                                                        ; User-Encoded       ; Auto               ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                      ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------+---------+
+; mux2_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/hunte/Documents/EE469/Lab2/mux2_1.sv     ;         ;
+; full_adder.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/hunte/Documents/EE469/Lab2/full_adder.sv ;         ;
+; add_sub_64.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/hunte/Documents/EE469/Lab2/add_sub_64.sv ;         ;
+; add_sub.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/hunte/Documents/EE469/Lab2/add_sub.sv    ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 115       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 187       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 42        ;
+;     -- 5 input functions                    ; 14        ;
+;     -- 4 input functions                    ; 7         ;
+;     -- <=3 input functions                  ; 124       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 195       ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; sub~input ;
+; Maximum fan-out                             ; 79        ;
+; Total fan-out                               ; 908       ;
+; Average fan-out                             ; 1.57      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+-------------+--------------+
+; |add_sub_64                 ; 187 (1)             ; 0 (0)                     ; 0                 ; 0          ; 195  ; 0            ; |add_sub_64                                      ; add_sub_64  ; work         ;
+;    |add_sub:as0|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:as0                          ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:as0|full_adder:f1            ; full_adder  ; work         ;
+;    |add_sub:as62|           ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:as62                         ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:as62|full_adder:f1           ; full_adder  ; work         ;
+;    |add_sub:as63|           ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:as63                         ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:as63|full_adder:f1           ; full_adder  ; work         ;
+;    |add_sub:eachBit[10].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[10].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[10].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[10].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[11].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[11].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[11].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[11].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[12].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[12].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[12].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[12].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[13].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[13].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[13].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[13].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[14].as| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[14].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[14].as|full_adder:f1 ; full_adder  ; work         ;
+;    |add_sub:eachBit[15].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[15].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[15].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[15].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[16].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[16].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[16].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[16].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[17].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[17].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[17].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[17].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[18].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[18].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[18].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[18].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[19].as| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[19].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[19].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[19].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[1].as|  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[1].as                ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[1].as|full_adder:f1  ; full_adder  ; work         ;
+;    |add_sub:eachBit[20].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[20].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[20].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[20].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[21].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[21].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[21].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[21].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[22].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[22].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[22].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[22].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[23].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[23].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[23].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[23].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[24].as| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[24].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[24].as|full_adder:f1 ; full_adder  ; work         ;
+;    |add_sub:eachBit[25].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[25].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[25].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[25].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[26].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[26].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[26].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[26].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[27].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[27].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[27].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[27].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[28].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[28].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[28].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[28].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[29].as| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[29].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[29].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[29].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[2].as|  ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[2].as                ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[2].as|full_adder:f1  ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[2].as|mux2_1:m       ; mux2_1      ; work         ;
+;    |add_sub:eachBit[30].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[30].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[30].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[30].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[31].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[31].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[31].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[31].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[32].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[32].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[32].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[32].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[33].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[33].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[33].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[33].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[34].as| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[34].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[34].as|full_adder:f1 ; full_adder  ; work         ;
+;    |add_sub:eachBit[35].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[35].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[35].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[35].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[36].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[36].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[36].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[36].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[37].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[37].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[37].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[37].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[38].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[38].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[38].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[38].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[39].as| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[39].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[39].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[39].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[3].as|  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[3].as                ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[3].as|full_adder:f1  ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[3].as|mux2_1:m       ; mux2_1      ; work         ;
+;    |add_sub:eachBit[40].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[40].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[40].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[40].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[41].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[41].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[41].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[41].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[42].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[42].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[42].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[42].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[43].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[43].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[43].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[43].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[44].as| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[44].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[44].as|full_adder:f1 ; full_adder  ; work         ;
+;    |add_sub:eachBit[45].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[45].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[45].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[45].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[46].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[46].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[46].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[46].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[47].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[47].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[47].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[47].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[48].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[48].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[48].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[48].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[49].as| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[49].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[49].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[49].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[4].as|  ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[4].as                ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[4].as|full_adder:f1  ; full_adder  ; work         ;
+;    |add_sub:eachBit[50].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[50].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[50].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[50].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[51].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[51].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[51].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[51].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[52].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[52].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[52].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[52].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[53].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[53].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[53].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[53].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[54].as| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[54].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[54].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[54].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[55].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[55].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[55].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[55].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[56].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[56].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[56].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[56].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[57].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[57].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[57].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[57].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[58].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[58].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[58].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[58].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[59].as| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[59].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[59].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[59].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[5].as|  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[5].as                ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[5].as|full_adder:f1  ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[5].as|mux2_1:m       ; mux2_1      ; work         ;
+;    |add_sub:eachBit[60].as| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[60].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[60].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[60].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[61].as| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[61].as               ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[61].as|full_adder:f1 ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[61].as|mux2_1:m      ; mux2_1      ; work         ;
+;    |add_sub:eachBit[6].as|  ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[6].as                ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[6].as|full_adder:f1  ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[6].as|mux2_1:m       ; mux2_1      ; work         ;
+;    |add_sub:eachBit[7].as|  ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[7].as                ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[7].as|full_adder:f1  ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[7].as|mux2_1:m       ; mux2_1      ; work         ;
+;    |add_sub:eachBit[8].as|  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[8].as                ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[8].as|full_adder:f1  ; full_adder  ; work         ;
+;       |mux2_1:m|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[8].as|mux2_1:m       ; mux2_1      ; work         ;
+;    |add_sub:eachBit[9].as|  ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[9].as                ; add_sub     ; work         ;
+;       |full_adder:f1|       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_64|add_sub:eachBit[9].as|full_adder:f1  ; full_adder  ; work         ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 187                         ;
+;     normal            ; 187                         ;
+;         2 data inputs ; 75                          ;
+;         3 data inputs ; 49                          ;
+;         4 data inputs ; 7                           ;
+;         5 data inputs ; 14                          ;
+;         6 data inputs ; 42                          ;
+; boundary_port         ; 195                         ;
+;                       ;                             ;
+; Max LUT depth         ; 26.00                       ;
+; Average LUT depth     ; 14.98                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Wed Oct 27 20:58:08 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Warning (12019): Can't analyze file -- file DE1_SoC.sv is missing
+Info (12021): Found 2 design units, including 2 entities, in source file mux2_1.sv
+    Info (12023): Found entity 1: mux2_1 File: C:/Users/hunte/Documents/EE469/Lab2/mux2_1.sv Line: 5
+    Info (12023): Found entity 2: mux2_1_testbench File: C:/Users/hunte/Documents/EE469/Lab2/mux2_1.sv Line: 16
+Info (12021): Found 2 design units, including 2 entities, in source file mux4_1.sv
+    Info (12023): Found entity 1: mux4_1 File: C:/Users/hunte/Documents/EE469/Lab2/mux4_1.sv Line: 5
+    Info (12023): Found entity 2: mux4_1_testbench File: C:/Users/hunte/Documents/EE469/Lab2/mux4_1.sv Line: 17
+Info (12021): Found 2 design units, including 2 entities, in source file mux16_1.sv
+    Info (12023): Found entity 1: mux16_1 File: C:/Users/hunte/Documents/EE469/Lab2/mux16_1.sv Line: 5
+    Info (12023): Found entity 2: mux16_1_testbench File: C:/Users/hunte/Documents/EE469/Lab2/mux16_1.sv Line: 25
+Info (12021): Found 2 design units, including 2 entities, in source file mux32_1.sv
+    Info (12023): Found entity 1: mux32_1 File: C:/Users/hunte/Documents/EE469/Lab2/mux32_1.sv Line: 5
+    Info (12023): Found entity 2: mux32_1_testbench File: C:/Users/hunte/Documents/EE469/Lab2/mux32_1.sv Line: 21
+Info (12021): Found 2 design units, including 2 entities, in source file d_ff.sv
+    Info (12023): Found entity 1: D_FF File: C:/Users/hunte/Documents/EE469/Lab2/D_FF.sv Line: 3
+    Info (12023): Found entity 2: D_FF_testbench File: C:/Users/hunte/Documents/EE469/Lab2/D_FF.sv Line: 14
+Info (12021): Found 2 design units, including 2 entities, in source file edecoder2_4.sv
+    Info (12023): Found entity 1: edecoder2_4 File: C:/Users/hunte/Documents/EE469/Lab2/edecoder2_4.sv Line: 5
+    Info (12023): Found entity 2: edecoder2_4_testbench File: C:/Users/hunte/Documents/EE469/Lab2/edecoder2_4.sv Line: 19
+Info (12021): Found 2 design units, including 2 entities, in source file edecoder3_8.sv
+    Info (12023): Found entity 1: edecoder3_8 File: C:/Users/hunte/Documents/EE469/Lab2/edecoder3_8.sv Line: 5
+    Info (12023): Found entity 2: edecoder3_8_testbench File: C:/Users/hunte/Documents/EE469/Lab2/edecoder3_8.sv Line: 27
+Info (12021): Found 2 design units, including 2 entities, in source file edecoder5_32.sv
+    Info (12023): Found entity 1: edecoder5_32 File: C:/Users/hunte/Documents/EE469/Lab2/edecoder5_32.sv Line: 6
+    Info (12023): Found entity 2: edecoder5_32_testbench File: C:/Users/hunte/Documents/EE469/Lab2/edecoder5_32.sv Line: 33
+Info (12021): Found 2 design units, including 2 entities, in source file ed_ff.sv
+    Info (12023): Found entity 1: eD_FF File: C:/Users/hunte/Documents/EE469/Lab2/eD_FF.sv Line: 5
+    Info (12023): Found entity 2: eD_FF_testbench File: C:/Users/hunte/Documents/EE469/Lab2/eD_FF.sv Line: 18
+Info (12021): Found 2 design units, including 2 entities, in source file register64.sv
+    Info (12023): Found entity 1: register64 File: C:/Users/hunte/Documents/EE469/Lab2/register64.sv Line: 7
+    Info (12023): Found entity 2: register64_testbench File: C:/Users/hunte/Documents/EE469/Lab2/register64.sv Line: 21
+Info (12021): Found 2 design units, including 2 entities, in source file register64_32x.sv
+    Info (12023): Found entity 1: register64_32x File: C:/Users/hunte/Documents/EE469/Lab2/register64_32x.sv Line: 7
+    Info (12023): Found entity 2: register64_32x_testbench File: C:/Users/hunte/Documents/EE469/Lab2/register64_32x.sv Line: 25
+Info (12021): Found 2 design units, including 2 entities, in source file mux32_1_64x.sv
+    Info (12023): Found entity 1: mux32_1_64x File: C:/Users/hunte/Documents/EE469/Lab2/mux32_1_64x.sv Line: 6
+    Info (12023): Found entity 2: mux32_1_64x_testbench File: C:/Users/hunte/Documents/EE469/Lab2/mux32_1_64x.sv Line: 32
+Info (12021): Found 2 design units, including 2 entities, in source file regfile.sv
+    Info (12023): Found entity 1: regfile File: C:/Users/hunte/Documents/EE469/Lab2/regfile.sv Line: 9
+    Info (12023): Found entity 2: regfile_testbench File: C:/Users/hunte/Documents/EE469/Lab2/regfile.sv Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: alu File: C:/Users/hunte/Documents/EE469/Lab2/alu.sv Line: 20
+Info (12021): Found 2 design units, including 2 entities, in source file full_adder.sv
+    Info (12023): Found entity 1: full_adder File: C:/Users/hunte/Documents/EE469/Lab2/full_adder.sv Line: 5
+    Info (12023): Found entity 2: full_adder_testbench File: C:/Users/hunte/Documents/EE469/Lab2/full_adder.sv Line: 21
+Info (12021): Found 2 design units, including 2 entities, in source file add_sub_64.sv
+    Info (12023): Found entity 1: add_sub_64 File: C:/Users/hunte/Documents/EE469/Lab2/add_sub_64.sv Line: 3
+    Info (12023): Found entity 2: add_sub_64_testbench File: C:/Users/hunte/Documents/EE469/Lab2/add_sub_64.sv Line: 32
+Info (12021): Found 2 design units, including 2 entities, in source file add_sub.sv
+    Info (12023): Found entity 1: add_sub File: C:/Users/hunte/Documents/EE469/Lab2/add_sub.sv Line: 5
+    Info (12023): Found entity 2: add_sub_testbench File: C:/Users/hunte/Documents/EE469/Lab2/add_sub.sv Line: 18
+Info (12021): Found 2 design units, including 2 entities, in source file bitwise_and_64.sv
+    Info (12023): Found entity 1: bitwise_and_64 File: C:/Users/hunte/Documents/EE469/Lab2/bitwise_and_64.sv Line: 1
+    Info (12023): Found entity 2: bitwise_and_64_testbench File: C:/Users/hunte/Documents/EE469/Lab2/bitwise_and_64.sv Line: 13
+Info (12021): Found 2 design units, including 2 entities, in source file bitwise_or_64.sv
+    Info (12023): Found entity 1: bitwise_or_64 File: C:/Users/hunte/Documents/EE469/Lab2/bitwise_or_64.sv Line: 1
+    Info (12023): Found entity 2: bitwise_or_64_testbench File: C:/Users/hunte/Documents/EE469/Lab2/bitwise_or_64.sv Line: 13
+Info (12021): Found 2 design units, including 2 entities, in source file bitwise_xor_64.sv
+    Info (12023): Found entity 1: bitwise_xor_64 File: C:/Users/hunte/Documents/EE469/Lab2/bitwise_xor_64.sv Line: 1
+    Info (12023): Found entity 2: bitwise_xor_64_testbench File: C:/Users/hunte/Documents/EE469/Lab2/bitwise_xor_64.sv Line: 13
+Info (12021): Found 2 design units, including 2 entities, in source file mux8_1.sv
+    Info (12023): Found entity 1: mux8_1 File: C:/Users/hunte/Documents/EE469/Lab2/mux8_1.sv Line: 5
+    Info (12023): Found entity 2: mux8_1_testbench File: C:/Users/hunte/Documents/EE469/Lab2/mux8_1.sv Line: 18
+Info (12021): Found 2 design units, including 2 entities, in source file mux8_1_64x.sv
+    Info (12023): Found entity 1: mux8_1_64x File: C:/Users/hunte/Documents/EE469/Lab2/mux8_1_64x.sv Line: 3
+    Info (12023): Found entity 2: mux8_1_64x_testbench File: C:/Users/hunte/Documents/EE469/Lab2/mux8_1_64x.sv Line: 29
+Info (12021): Found 2 design units, including 2 entities, in source file nor_64.sv
+    Info (12023): Found entity 1: nor_64 File: C:/Users/hunte/Documents/EE469/Lab2/nor_64.sv Line: 3
+    Info (12023): Found entity 2: nor_64_testbench File: C:/Users/hunte/Documents/EE469/Lab2/nor_64.sv Line: 29
+Warning (10236): Verilog HDL Implicit Net warning at alu.sv(28): created implicit net for "NEED" File: C:/Users/hunte/Documents/EE469/Lab2/alu.sv Line: 28
+Critical Warning (10846): Verilog HDL Instantiation warning at alu.sv(45): instance has no name File: C:/Users/hunte/Documents/EE469/Lab2/alu.sv Line: 45
+Info (12127): Elaborating entity "add_sub_64" for the top level hierarchy
+Info (12128): Elaborating entity "add_sub" for hierarchy "add_sub:as0" File: C:/Users/hunte/Documents/EE469/Lab2/add_sub_64.sv Line: 12
+Info (12128): Elaborating entity "mux2_1" for hierarchy "add_sub:as0|mux2_1:m" File: C:/Users/hunte/Documents/EE469/Lab2/add_sub.sv Line: 13
+Info (12128): Elaborating entity "full_adder" for hierarchy "add_sub:as0|full_adder:f1" File: C:/Users/hunte/Documents/EE469/Lab2/add_sub.sv Line: 14
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/hunte/Documents/EE469/Lab2/output_files/DE1_SoC.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 382 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 129 input pins
+    Info (21059): Implemented 66 output pins
+    Info (21061): Implemented 187 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4825 megabytes
+    Info: Processing ended: Wed Oct 27 20:58:19 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/hunte/Documents/EE469/Lab2/output_files/DE1_SoC.map.smsg.
+
+

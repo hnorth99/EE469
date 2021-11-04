@@ -1,0 +1,23 @@
+module edecoder2_4(i1, i0, e, o0, o1, o2, o3);
+	input logic i1, i0, e;
+	output logic o0, o1, o2, o3;
+	
+	assign o0 = e & ~i1 & ~i0;
+	assign o1 = e & ~i1 & i0;
+	assign o2 = e & i1 & ~i0;
+	assign o3 = e & i1 & i0;
+endmodule
+
+module edecoder2_4_testbench();
+	logic i1, i0, e;
+	logic o0, o1, o2, o3;
+	
+	edecoder2_4 dut (.*);
+	
+	integer i;
+	initial begin
+		for(i = 0; i < 8; i++) begin
+			{i1, i0, e} = i; #10;
+		end
+	end
+endmodule	

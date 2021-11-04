@@ -1,0 +1,24 @@
+module bitwise_and_64(a, b, out);
+	input logic [63:0] a, b;
+	output logic [63:0] out;
+	
+	genvar i;
+	generate
+		for (i = 0; i < 64; i++) begin : eachBit
+			and #50 (c[i], a[i], b[i]);
+		end
+	endgenerate
+endmodule
+
+module bitwise_and_64_testbench();
+	logic [63:0] a, b;
+	logic [63:0] out;
+	
+	bitwise_and_64 dut (.*);
+	
+	initial begin
+		a = 64'b0; b = 64'b0; #100;
+		a = 64'b1010110001; b = 64'b10010101001010; #100;
+		a = 64'dd9223372036854775807; b = 64'dd9223372036854775807; #100;
+	end
+endmodule

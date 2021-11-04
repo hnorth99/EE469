@@ -1,0 +1,2182 @@
+|add_sub_64
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+a[16] => a[16].IN1
+a[17] => a[17].IN1
+a[18] => a[18].IN1
+a[19] => a[19].IN1
+a[20] => a[20].IN1
+a[21] => a[21].IN1
+a[22] => a[22].IN1
+a[23] => a[23].IN1
+a[24] => a[24].IN1
+a[25] => a[25].IN1
+a[26] => a[26].IN1
+a[27] => a[27].IN1
+a[28] => a[28].IN1
+a[29] => a[29].IN1
+a[30] => a[30].IN1
+a[31] => a[31].IN1
+a[32] => a[32].IN1
+a[33] => a[33].IN1
+a[34] => a[34].IN1
+a[35] => a[35].IN1
+a[36] => a[36].IN1
+a[37] => a[37].IN1
+a[38] => a[38].IN1
+a[39] => a[39].IN1
+a[40] => a[40].IN1
+a[41] => a[41].IN1
+a[42] => a[42].IN1
+a[43] => a[43].IN1
+a[44] => a[44].IN1
+a[45] => a[45].IN1
+a[46] => a[46].IN1
+a[47] => a[47].IN1
+a[48] => a[48].IN1
+a[49] => a[49].IN1
+a[50] => a[50].IN1
+a[51] => a[51].IN1
+a[52] => a[52].IN1
+a[53] => a[53].IN1
+a[54] => a[54].IN1
+a[55] => a[55].IN1
+a[56] => a[56].IN1
+a[57] => a[57].IN1
+a[58] => a[58].IN1
+a[59] => a[59].IN1
+a[60] => a[60].IN1
+a[61] => a[61].IN1
+a[62] => a[62].IN1
+a[63] => a[63].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+b[16] => b[16].IN1
+b[17] => b[17].IN1
+b[18] => b[18].IN1
+b[19] => b[19].IN1
+b[20] => b[20].IN1
+b[21] => b[21].IN1
+b[22] => b[22].IN1
+b[23] => b[23].IN1
+b[24] => b[24].IN1
+b[25] => b[25].IN1
+b[26] => b[26].IN1
+b[27] => b[27].IN1
+b[28] => b[28].IN1
+b[29] => b[29].IN1
+b[30] => b[30].IN1
+b[31] => b[31].IN1
+b[32] => b[32].IN1
+b[33] => b[33].IN1
+b[34] => b[34].IN1
+b[35] => b[35].IN1
+b[36] => b[36].IN1
+b[37] => b[37].IN1
+b[38] => b[38].IN1
+b[39] => b[39].IN1
+b[40] => b[40].IN1
+b[41] => b[41].IN1
+b[42] => b[42].IN1
+b[43] => b[43].IN1
+b[44] => b[44].IN1
+b[45] => b[45].IN1
+b[46] => b[46].IN1
+b[47] => b[47].IN1
+b[48] => b[48].IN1
+b[49] => b[49].IN1
+b[50] => b[50].IN1
+b[51] => b[51].IN1
+b[52] => b[52].IN1
+b[53] => b[53].IN1
+b[54] => b[54].IN1
+b[55] => b[55].IN1
+b[56] => b[56].IN1
+b[57] => b[57].IN1
+b[58] => b[58].IN1
+b[59] => b[59].IN1
+b[60] => b[60].IN1
+b[61] => b[61].IN1
+b[62] => b[62].IN1
+b[63] => b[63].IN1
+sub => sub.IN65
+s[0] <= add_sub:as0.s
+s[1] <= add_sub:eachBit[1].as.s
+s[2] <= add_sub:eachBit[2].as.s
+s[3] <= add_sub:eachBit[3].as.s
+s[4] <= add_sub:eachBit[4].as.s
+s[5] <= add_sub:eachBit[5].as.s
+s[6] <= add_sub:eachBit[6].as.s
+s[7] <= add_sub:eachBit[7].as.s
+s[8] <= add_sub:eachBit[8].as.s
+s[9] <= add_sub:eachBit[9].as.s
+s[10] <= add_sub:eachBit[10].as.s
+s[11] <= add_sub:eachBit[11].as.s
+s[12] <= add_sub:eachBit[12].as.s
+s[13] <= add_sub:eachBit[13].as.s
+s[14] <= add_sub:eachBit[14].as.s
+s[15] <= add_sub:eachBit[15].as.s
+s[16] <= add_sub:eachBit[16].as.s
+s[17] <= add_sub:eachBit[17].as.s
+s[18] <= add_sub:eachBit[18].as.s
+s[19] <= add_sub:eachBit[19].as.s
+s[20] <= add_sub:eachBit[20].as.s
+s[21] <= add_sub:eachBit[21].as.s
+s[22] <= add_sub:eachBit[22].as.s
+s[23] <= add_sub:eachBit[23].as.s
+s[24] <= add_sub:eachBit[24].as.s
+s[25] <= add_sub:eachBit[25].as.s
+s[26] <= add_sub:eachBit[26].as.s
+s[27] <= add_sub:eachBit[27].as.s
+s[28] <= add_sub:eachBit[28].as.s
+s[29] <= add_sub:eachBit[29].as.s
+s[30] <= add_sub:eachBit[30].as.s
+s[31] <= add_sub:eachBit[31].as.s
+s[32] <= add_sub:eachBit[32].as.s
+s[33] <= add_sub:eachBit[33].as.s
+s[34] <= add_sub:eachBit[34].as.s
+s[35] <= add_sub:eachBit[35].as.s
+s[36] <= add_sub:eachBit[36].as.s
+s[37] <= add_sub:eachBit[37].as.s
+s[38] <= add_sub:eachBit[38].as.s
+s[39] <= add_sub:eachBit[39].as.s
+s[40] <= add_sub:eachBit[40].as.s
+s[41] <= add_sub:eachBit[41].as.s
+s[42] <= add_sub:eachBit[42].as.s
+s[43] <= add_sub:eachBit[43].as.s
+s[44] <= add_sub:eachBit[44].as.s
+s[45] <= add_sub:eachBit[45].as.s
+s[46] <= add_sub:eachBit[46].as.s
+s[47] <= add_sub:eachBit[47].as.s
+s[48] <= add_sub:eachBit[48].as.s
+s[49] <= add_sub:eachBit[49].as.s
+s[50] <= add_sub:eachBit[50].as.s
+s[51] <= add_sub:eachBit[51].as.s
+s[52] <= add_sub:eachBit[52].as.s
+s[53] <= add_sub:eachBit[53].as.s
+s[54] <= add_sub:eachBit[54].as.s
+s[55] <= add_sub:eachBit[55].as.s
+s[56] <= add_sub:eachBit[56].as.s
+s[57] <= add_sub:eachBit[57].as.s
+s[58] <= add_sub:eachBit[58].as.s
+s[59] <= add_sub:eachBit[59].as.s
+s[60] <= add_sub:eachBit[60].as.s
+s[61] <= add_sub:eachBit[61].as.s
+s[62] <= add_sub:as62.s
+s[63] <= add_sub:as63.s
+overflow <= comb.DB_MAX_OUTPUT_PORT_TYPE
+carryout <= add_sub:as63.cout
+
+
+|add_sub_64|add_sub:as0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:as0|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:as0|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[1].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[1].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[1].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[2].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[2].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[2].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[3].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[3].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[3].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[4].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[4].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[4].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[5].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[5].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[5].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[6].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[6].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[6].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[7].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[7].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[7].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[8].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[8].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[8].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[9].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[9].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[9].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[10].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[10].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[10].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[11].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[11].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[11].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[12].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[12].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[12].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[13].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[13].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[13].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[14].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[14].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[14].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[15].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[15].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[15].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[16].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[16].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[16].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[17].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[17].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[17].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[18].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[18].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[18].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[19].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[19].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[19].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[20].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[20].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[20].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[21].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[21].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[21].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[22].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[22].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[22].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[23].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[23].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[23].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[24].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[24].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[24].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[25].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[25].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[25].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[26].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[26].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[26].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[27].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[27].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[27].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[28].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[28].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[28].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[29].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[29].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[29].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[30].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[30].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[30].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[31].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[31].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[31].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[32].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[32].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[32].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[33].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[33].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[33].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[34].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[34].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[34].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[35].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[35].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[35].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[36].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[36].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[36].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[37].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[37].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[37].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[38].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[38].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[38].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[39].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[39].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[39].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[40].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[40].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[40].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[41].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[41].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[41].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[42].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[42].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[42].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[43].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[43].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[43].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[44].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[44].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[44].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[45].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[45].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[45].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[46].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[46].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[46].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[47].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[47].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[47].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[48].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[48].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[48].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[49].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[49].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[49].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[50].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[50].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[50].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[51].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[51].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[51].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[52].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[52].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[52].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[53].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[53].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[53].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[54].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[54].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[54].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[55].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[55].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[55].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[56].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[56].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[56].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[57].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[57].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[57].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[58].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[58].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[58].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[59].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[59].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[59].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[60].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[60].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[60].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[61].as
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:eachBit[61].as|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:eachBit[61].as|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:as62
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:as62|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:as62|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:as63
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sub => sub.IN1
+s <= full_adder:f1.s
+cout <= full_adder:f1.cout
+
+
+|add_sub_64|add_sub:as63|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_sub_64|add_sub:as63|full_adder:f1
+a => WideXor0.IN0
+a => andTop.IN0
+a => andMid.IN0
+b => WideXor0.IN1
+b => andTop.IN1
+b => andBot.IN0
+cin => WideXor0.IN2
+cin => andMid.IN1
+cin => andBot.IN1
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= andFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
