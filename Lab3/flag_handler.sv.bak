@@ -1,0 +1,13 @@
+// This module will handle the flag registers by storing input signals
+// into registers when enable signal is high
+module flag_handler(clk, reset, en, zero_in, oflow_in, neg_in, cout_in,
+						  zero, overflow, negative, carry_out);
+	input logic clk, reset, en;
+	input logic zero_in, oflow_in, neg_in, cout_in;
+	output logic zero, overflow, negative, carry_out
+	
+	eD_FF zDff (.clk, .reset, .en, .din(zero_in), .dout(zero));
+	eD_FF oDff (.clk, .reset, .en, .din(oflow_in), .dout(overflow));
+	eD_FF nDff (.clk, .reset, .en, .din(neg_in), .dout(negative));
+	eD_FF cDff (.clk, .reset, .en, .din(cout_in), .dout(carry_out));
+endmodule

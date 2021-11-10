@@ -1,0 +1,115 @@
+|flag_handler
+clk => eD_FF:zDff.clk
+clk => eD_FF:oDff.clk
+clk => eD_FF:nDff.clk
+clk => eD_FF:cDff.clk
+reset => eD_FF:zDff.reset
+reset => eD_FF:oDff.reset
+reset => eD_FF:nDff.reset
+reset => eD_FF:cDff.reset
+en => eD_FF:zDff.en
+en => eD_FF:oDff.en
+en => eD_FF:nDff.en
+en => eD_FF:cDff.en
+zero_in => eD_FF:zDff.din
+oflow_in => eD_FF:oDff.din
+neg_in => eD_FF:nDff.din
+cout_in => eD_FF:cDff.din
+zero << eD_FF:zDff.dout
+overflow << eD_FF:oDff.dout
+negative << eD_FF:nDff.dout
+carry_out << eD_FF:cDff.dout
+
+
+|flag_handler|eD_FF:zDff
+clk => D_FF:d_ff.clk
+reset => D_FF:d_ff.reset
+en => en.IN1
+din => din.IN1
+dout <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|flag_handler|eD_FF:zDff|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|flag_handler|eD_FF:zDff|D_FF:d_ff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q.DATAA
+reset => q.OUTPUTSELECT
+clk => q~reg0.CLK
+
+
+|flag_handler|eD_FF:oDff
+clk => D_FF:d_ff.clk
+reset => D_FF:d_ff.reset
+en => en.IN1
+din => din.IN1
+dout <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|flag_handler|eD_FF:oDff|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|flag_handler|eD_FF:oDff|D_FF:d_ff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q.DATAA
+reset => q.OUTPUTSELECT
+clk => q~reg0.CLK
+
+
+|flag_handler|eD_FF:nDff
+clk => D_FF:d_ff.clk
+reset => D_FF:d_ff.reset
+en => en.IN1
+din => din.IN1
+dout <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|flag_handler|eD_FF:nDff|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|flag_handler|eD_FF:nDff|D_FF:d_ff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q.DATAA
+reset => q.OUTPUTSELECT
+clk => q~reg0.CLK
+
+
+|flag_handler|eD_FF:cDff
+clk => D_FF:d_ff.clk
+reset => D_FF:d_ff.reset
+en => en.IN1
+din => din.IN1
+dout <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|flag_handler|eD_FF:cDff|mux2_1:m
+i0 => andR.IN0
+i1 => andL.IN0
+sel => andL.IN1
+sel => andR.IN1
+out <= orF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|flag_handler|eD_FF:cDff|D_FF:d_ff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q.DATAA
+reset => q.OUTPUTSELECT
+clk => q~reg0.CLK
+
+
