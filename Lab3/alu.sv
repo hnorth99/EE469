@@ -51,10 +51,10 @@ module alu(A, B, cntrl, result, negative, zero, overflow, carryout);
 	and #50 (add_sub_sel, cntrl2_not, cntrl[1]);
 	
 	// Determine carryout flag
-	mux2_1 m (.i0(0), .i1(cout), .sel(add_sub_sel), .out(carryout));
+	mux2_1 m (.i0(1'b0), .i1(cout), .sel(add_sub_sel), .out(carryout));
 	
 	// Determine overflow flag
-	mux2_1 m2 (.i0(0), .i1(oflow), .sel(add_sub_sel), .out(overflow));
+	mux2_1 m2 (.i0(1'b0), .i1(oflow), .sel(add_sub_sel), .out(overflow));
 	
 	// Determine negative flag
 	assign negative = result_wire[63];

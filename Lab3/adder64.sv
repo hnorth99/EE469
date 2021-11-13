@@ -9,7 +9,7 @@ module adder64(a, b, s);
 	
 	logic [63:0] cout;
 	// Use a full adder -- determine if sub is taking place to add in 1
-	full_adder f0 (.a(a[0]), .b(b[0]), .cin(0), 
+	full_adder f0 (.a(a[0]), .b(b[0]), .cin(1'b0), 
 					 .s(s[0]), .cout(cout[0]));
 	
 	// Generate the 64 add_sub units

@@ -1,6 +1,5 @@
 // Module to extend an input with EXTENSION parameter to reach a 32 bit output
 // that has the same value as the smaller bit sized input
-
 module sign_extender #(
 	parameter EXTENSION=6) 
 	(in, out);

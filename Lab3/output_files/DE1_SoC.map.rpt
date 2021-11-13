@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Tue Nov 09 23:48:47 2021
+Wed Nov 10 21:32:24 2021
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Nov 09 23:48:47 2021           ;
+; Analysis & Synthesis Status ; Failed - Wed Nov 10 21:32:24 2021           ;
 ; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name               ; DE1_SoC                                     ;
 ; Top-level Entity Name       ; instruction_handler                         ;
@@ -162,7 +162,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Nov 09 23:48:34 2021
+    Info: Processing started: Wed Nov 10 21:32:14 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Warning (12019): Can't analyze file -- file DE1_SoC.sv is missing
@@ -269,6 +269,21 @@ Info (12021): Found 2 design units, including 2 entities, in source file adder64
     Info (12023): Found entity 2: adder64_testbench File: C:/Users/hunte/Documents/EE469/Lab3/adder64.sv Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file instruction_decoder.sv
     Info (12023): Found entity 1: instruction_decoder File: C:/Users/hunte/Documents/EE469/Lab3/instruction_decoder.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file mux4_1_32x.sv
+    Info (12023): Found entity 1: mux4_1_32x File: C:/Users/hunte/Documents/EE469/Lab3/mux4_1_32x.sv Line: 5
+    Info (12023): Found entity 2: mux4_1_32xtestbench File: C:/Users/hunte/Documents/EE469/Lab3/mux4_1_32x.sv Line: 17
+Info (12021): Found 2 design units, including 2 entities, in source file mux2_1_32x.sv
+    Info (12023): Found entity 1: mux2_1_32x File: C:/Users/hunte/Documents/EE469/Lab3/mux2_1_32x.sv Line: 6
+    Info (12023): Found entity 2: mux2_1_32x_testbench File: C:/Users/hunte/Documents/EE469/Lab3/mux2_1_32x.sv Line: 20
+Info (12021): Found 2 design units, including 2 entities, in source file mux4_1_64x.sv
+    Info (12023): Found entity 1: mux4_1_64x File: C:/Users/hunte/Documents/EE469/Lab3/mux4_1_64x.sv Line: 5
+    Info (12023): Found entity 2: mux4_1_64x_testbench File: C:/Users/hunte/Documents/EE469/Lab3/mux4_1_64x.sv Line: 17
+Info (12021): Found 2 design units, including 2 entities, in source file processor.sv
+    Info (12023): Found entity 1: processor File: C:/Users/hunte/Documents/EE469/Lab3/processor.sv Line: 2
+    Info (12023): Found entity 2: processor_testbench File: C:/Users/hunte/Documents/EE469/Lab3/processor.sv Line: 60
+Info (12021): Found 2 design units, including 2 entities, in source file mux2_1_5x.sv
+    Info (12023): Found entity 1: mux2_1_5x File: C:/Users/hunte/Documents/EE469/Lab3/mux2_1_5x.sv Line: 6
+    Info (12023): Found entity 2: mux2_1_5x_testbench File: C:/Users/hunte/Documents/EE469/Lab3/mux2_1_5x.sv Line: 20
 Info (12127): Elaborating entity "instruction_handler" for the top level hierarchy
 Info (12128): Elaborating entity "D_FF_64" for hierarchy "D_FF_64:d" File: C:/Users/hunte/Documents/EE469/Lab3/instruction_handler.sv Line: 12
 Info (12128): Elaborating entity "D_FF" for hierarchy "D_FF_64:d|D_FF:eachBit[0].d" File: C:/Users/hunte/Documents/EE469/Lab3/D_FF_64.sv Line: 14
@@ -286,10 +301,10 @@ Info (10648): Verilog HDL Display System Task info at instructmem.sv(43): Runnin
 Error (12152): Can't elaborate user hierarchy "instructmem:imem" File: C:/Users/hunte/Documents/EE469/Lab3/instruction_handler.sv Line: 39
 Info (144001): Generated suppressed messages file C:/Users/hunte/Documents/EE469/Lab3/output_files/DE1_SoC.map.smsg
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 2 warnings
-    Error: Peak virtual memory: 4773 megabytes
-    Error: Processing ended: Tue Nov 09 23:48:48 2021
-    Error: Elapsed time: 00:00:14
-    Error: Total CPU time (on all processors): 00:00:30
+    Error: Peak virtual memory: 4771 megabytes
+    Error: Processing ended: Wed Nov 10 21:32:24 2021
+    Error: Elapsed time: 00:00:10
+    Error: Total CPU time (on all processors): 00:00:20
 
 
 +------------------------------------------+

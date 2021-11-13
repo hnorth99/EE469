@@ -1,5 +1,7 @@
 `timescale 1ps/1ps
 
+// Unit that will handle the intructions within the processor. Decide how to increment 
+// the program counter and properly release the next instruction.
 module instruction_handler(clk, reset, imm26, imm19, uncondBr, brTaken, instr);
 	input logic clk, reset;
 	input logic [25:0] imm26;
@@ -30,7 +32,7 @@ module instruction_handler(clk, reset, imm26, imm19, uncondBr, brTaken, instr);
 	
 	// Add 4 to the current pc value
 	logic [63:0] addr;
-	adder64 add64 (.a(pc_curr), .b(4), .s(addr));
+	adder64 add64 (.a(pc_curr), .b(64'd4), .s(addr));
 
 	// Select if we want to take the normal +4 instruction or the branch
 	mux2_1_64x pcMux (.i0(addr), .i1(branch_addr), .sel(brTaken), .out(pc_next));

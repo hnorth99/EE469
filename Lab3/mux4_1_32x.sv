@@ -2,7 +2,7 @@
 // This builds a 32 bit 4 to 1 mux using 2 32 bit 2 to 1 muxs.
 // Receives 4 32 bit input lines that are toggled onto the 32 bit output
 // line by the 2 bit sel input.
-module mux4_1_32x();
+module mux4_1_32x(i00, i01, i10, i11, sel0, sel1, out);
 	input logic [31:0] i00, i01, i10, i11;
 	input logic sel0, sel1;
 	output logic [31:0] out;

@@ -17,12 +17,12 @@ module mux2_1_32x(i0, i1, sel, out);
 	endgenerate
 endmodule
 
-module mux2_1_64x_testbench();
-	logic [63:0] i0, i1;
+module mux2_1_32x_testbench();
+	logic [31:0] i0, i1;
 	logic sel;
-	logic [63:0] out;
+	logic [31:0] out;
 	
-	mux2_1_64x dut (.*);
+	mux2_1_32x dut (.*);
 	
 	initial begin
 		sel = 0; i0 = 32'd64; i1 = 32'd102; #1000;

@@ -1,3 +1,5 @@
+// Module that will shift in two zeros and then shift everything else to the left
+// Top two bits shifted out. 
 module shift_left_2 (in, out);
 	input logic [63:0] in;
 	output logic [63:0] out;
