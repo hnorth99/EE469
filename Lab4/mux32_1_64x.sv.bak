@@ -1,0 +1,13 @@
+module mux32_1_64x(i, sel, out);
+	input logic [63:0] i [31:0];
+	input logic [4:0] sel;
+	output logic [63:0] out;
+	
+	genvar k;
+	generate
+		for (k = 0; k < 64; k++) begin : eachBit
+			mux32_1 m32x1 (.i(i[31:0][k]), .sel(sel), .out(out[k]));
+		end
+	endgenerate
+	
+endmodule

@@ -1,0 +1,21 @@
+`timescale 1ps/1ps
+
+module full_adder(a, b, cin, s, cout);
+	input logic a, b, cin;
+	output logic s, cout;
+	
+endmodule
+
+module full_adder_testbench();
+	logic a, b, cin;
+	logic s, cout;
+	
+	full_adder dut (.*);
+	
+	initial begin
+		for(i = 0; i < 8; i++) begin
+			{a, b, cin} = i; #100;
+		end
+	end
+	
+endmodule

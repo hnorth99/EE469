@@ -1,0 +1,61 @@
+module instruction_decoder(instruction, 
+									UncondBr, BrTaken, ImmALUA, RegWrite, 
+									RdToRdB, Imm12ALU, RegWData, ShiftToALUB, ShiftDir,
+									ReadMem, MemWr, RdToRdA, ALUCntrl, FlagE,
+									Rd, Rm, Rn, imm26, imm19, imm12, imm9);
+									
+	input logic [31:0] instruction;
+	output logic 		 UncondBr, BrTaken, ImmALUA, RegWrite, RdToRdB, Imm12ALU, 
+							 ShiftToALUB, ShiftDir, ReadMem, MemWr, RdToRdA, FlagE;
+	output logic [1:0] RegWData;
+	output logic [2:0] ALUCntrl;
+	output logic [4:0] Rd, Rm, Rn;
+	output logic [25:0] imm26;
+	output logic [18:0] imm19;
+	output logic [11:0] imm12;
+	output logic [8:0]  imm9;
+	
+	enum {ADDI=10'b1001000100, ADDS, B, BLT, CBZ, LDUR, LSL, LSR, MUL, STUR, SUBS} operation;
+	
+	//I type:
+	// ADDI : 0x244
+	// [31:22] = OPCODE
+	// [21:10] = imm12
+	// [09:05] = rn
+	// [04:00] = rd
+	//D type:
+	//	STUR : 0x7C0
+	// LDUR : 0x7C2
+	// [31:21] = OPCODE
+	// [20:12] = imm9
+	// [11:10] = 00
+	// [09:05] = rn
+	// [04:00] = rd
+	//B type: 
+	// B : 0x05
+	// [31:26] = OPCODE
+	// [25:00] = imm26
+	//CB type:
+	// B.LT : 0x0B
+	// CBZ : 0xB4
+	// [31:24] = OPCODE
+	// [23:05] = imm19
+	// [04:00] = rd
+	//R type:
+	// ADDS : 0x558
+	// SUBS : 0x758
+	// LSL : 0x69B
+	// LSR : 0x69A
+	// MUL : 0x498
+	// [31:21] = OPCODE
+	// [20:16] = rm
+	// [15:10] = shamt
+	// [09:05] = rn
+	// [04:00] = rd
+	enum {} instr_type
+	
+endmodule
+
+module instruction_decoder_testbench();
+
+endmodule

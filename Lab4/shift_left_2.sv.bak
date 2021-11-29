@@ -1,0 +1,25 @@
+module shift_left_2 (in, out);
+	input logic [31:0] in;
+	input logic [31:0] out;
+	
+	genvar i;
+	generate
+		for (i = 2; i < 32; i++) begin : eachBit0
+			assign out[i] = in[i - 2];
+		end
+	endgenerate
+	assign out[0] = 0;
+	assign out[1] = 0;
+endmodule
+
+module shift_left_2_testbench ();
+	logic [31:0] in;
+	logic [31:0] out;
+	
+	shift_left_2 dut (.*);
+	
+	initial begin
+		in <= 32'd4; #1000;
+		in <= '1; #1000;
+	end
+endmodule

@@ -1,0 +1,18 @@
+module sign_extender #(parameter EXTENSION;) (in, out);
+	input logic [31 - EXTENSION:0] in;
+	output logic [31:0] out;
+	
+	genvar i;
+	
+	generate
+		for (i = 0; i < 32- EXTENSION; i++) begin : eachBit0
+			out[i] = in[i];
+		end
+	endgenerate
+	
+	generate
+		for (i = 32 - EXTENSION; i < 32; i++) begin : eachBit1
+			out[i] = in[31- EXTENSION];
+		end
+	endgenerate
+endmodule

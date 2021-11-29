@@ -1,0 +1,15 @@
+module instruction_handler(clk, reset, imm26, imm19, uncondBr, brTaken, instr);
+	input logic clk, reset;
+	input logic [25:0] imm26;
+	input logic [18:0] imm19;
+	input logic uncondBr, brTaken;
+	output logic [31:0] instr;
+	
+	
+	
+	
+	mux2_1 immMux (.i0(), .i1(din), .sel(en), .out(d));
+	mux2_1 brMux (.i0(f), .i1(din), .sel(en), .out(d));
+	
+	
+endmodule

@@ -1,0 +1,27 @@
+module nor_64(a, out);
+	input logic [63:0] a;
+	output logic out;
+	
+	logic [15:0] l1_wires;
+	logic [3:0] l2_wires;
+	logic l3_wire;
+	
+	genvar i;
+	generate
+		for (i = 0; i < 64; i++) begin : eachBit
+			or #50 (l1_wires[i], a[4*i + 3: 4*i])
+		end
+	endgenerate
+	
+endmodule
+
+module nor_64_testbench();
+	logic [63:0] a;
+	logic out;
+	
+	nor_64 dut (.*);
+	
+	initial begin
+		
+	end
+endmodule
