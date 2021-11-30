@@ -1,0 +1,13 @@
+module regfileread_queue(clk, reset, Swap, RdToRdA, RdToRdB, Shamt, ShiftDir,
+								 ShiftToALUB, Imm12ALU, ImmALUA, ImmALUA, Imm12, Imm9,
+								 SwapO, RdToRdAO, RdToRdBO, ShamtO, ShiftDirO
+								 ShiftToALUBO, Imm12ALUO, ImmALUAO, ImmALUAO, Imm12O, Imm9O);
+	input logic clk, reset, Swap, RdToRdA, RdToRdB, ShiftDir, ShiftToALUB
+					Imm12ALU, ImmALUA;
+	input logic [11:0] Imm12;
+	input logic [8:0] Imm9;
+	
+	ou
+endmodule
+
+module Reg

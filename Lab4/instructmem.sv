@@ -11,7 +11,8 @@
 //`define BENCHMARK "./test06_MulLslLsr.arm"
 //`define BENCHMARK "./test10_forwarding.arm"
 //`define BENCHMARK "./test11_Sort.arm"
-`define BENCHMARK "./test12_Division.arm"
+//`define BENCHMARK "./test12_Division.arm"
+`define BENCHMARK "./test_dumb_noforwardsorbranches.arm"
 
 `timescale 1ns/10ps
 
