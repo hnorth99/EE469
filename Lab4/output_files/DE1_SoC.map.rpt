@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Mon Nov 29 22:34:32 2021
+Wed Dec 01 15:09:53 2021
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Nov 29 22:34:31 2021           ;
+; Analysis & Synthesis Status ; Failed - Wed Dec 01 15:09:53 2021           ;
 ; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name               ; DE1_SoC                                     ;
 ; Top-level Entity Name       ; processor                                   ;
@@ -162,7 +162,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Nov 29 22:34:22 2021
+    Info: Processing started: Wed Dec 01 15:09:39 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file register5_3x.sv
@@ -173,16 +173,16 @@ Info (12021): Found 2 design units, including 2 entities, in source file registe
     Info (12023): Found entity 2: register5_testbench File: C:/Users/hunte/Documents/EE469/Lab4/register5.sv Line: 21
 Info (12021): Found 2 design units, including 2 entities, in source file regfilewrite_queue_sub.sv
     Info (12023): Found entity 1: regfilewrite_queue_sub File: C:/Users/hunte/Documents/EE469/Lab4/regfilewrite_queue_sub.sv Line: 7
-    Info (12023): Found entity 2: regfilewrite_queue_sub_testbench File: C:/Users/hunte/Documents/EE469/Lab4/regfilewrite_queue_sub.sv Line: 29
+    Info (12023): Found entity 2: regfilewrite_queue_sub_testbench File: C:/Users/hunte/Documents/EE469/Lab4/regfilewrite_queue_sub.sv Line: 19
 Info (12021): Found 2 design units, including 2 entities, in source file regfilewrite_queue.sv
     Info (12023): Found entity 1: regfilewrite_queue File: C:/Users/hunte/Documents/EE469/Lab4/regfilewrite_queue.sv Line: 8
-    Info (12023): Found entity 2: regfilewrite_queue_testbench File: C:/Users/hunte/Documents/EE469/Lab4/regfilewrite_queue.sv Line: 27
+    Info (12023): Found entity 2: regfilewrite_queue_testbench File: C:/Users/hunte/Documents/EE469/Lab4/regfilewrite_queue.sv Line: 24
 Info (12021): Found 2 design units, including 2 entities, in source file alu_queue_sub.sv
     Info (12023): Found entity 1: alu_queue_sub File: C:/Users/hunte/Documents/EE469/Lab4/alu_queue_sub.sv Line: 7
-    Info (12023): Found entity 2: alu_queue_sub_testbench File: C:/Users/hunte/Documents/EE469/Lab4/alu_queue_sub.sv Line: 24
+    Info (12023): Found entity 2: alu_queue_sub_testbench File: C:/Users/hunte/Documents/EE469/Lab4/alu_queue_sub.sv Line: 39
 Info (12021): Found 2 design units, including 2 entities, in source file alu_queue.sv
     Info (12023): Found entity 1: alu_queue File: C:/Users/hunte/Documents/EE469/Lab4/alu_queue.sv Line: 8
-    Info (12023): Found entity 2: alu_queue_testbench File: C:/Users/hunte/Documents/EE469/Lab4/alu_queue.sv Line: 23
+    Info (12023): Found entity 2: alu_queue_testbench File: C:/Users/hunte/Documents/EE469/Lab4/alu_queue.sv Line: 33
 Warning (12019): Can't analyze file -- file DE1_SoC.sv is missing
 Info (12021): Found 2 design units, including 2 entities, in source file mux2_1.sv
     Info (12023): Found entity 1: mux2_1 File: C:/Users/hunte/Documents/EE469/Lab4/mux2_1.sv Line: 5
@@ -262,8 +262,8 @@ Info (12021): Found 2 design units, including 2 entities, in source file datamem
     Info (12023): Found entity 1: datamem File: C:/Users/hunte/Documents/EE469/Lab4/datamem.sv Line: 12
     Info (12023): Found entity 2: datamem_testbench File: C:/Users/hunte/Documents/EE469/Lab4/datamem.sv Line: 70
 Info (12021): Found 2 design units, including 2 entities, in source file instructmem.sv
-    Info (12023): Found entity 1: instructmem File: C:/Users/hunte/Documents/EE469/Lab4/instructmem.sv Line: 21
-    Info (12023): Found entity 2: instructmem_testbench File: C:/Users/hunte/Documents/EE469/Lab4/instructmem.sv Line: 61
+    Info (12023): Found entity 1: instructmem File: C:/Users/hunte/Documents/EE469/Lab4/instructmem.sv Line: 23
+    Info (12023): Found entity 2: instructmem_testbench File: C:/Users/hunte/Documents/EE469/Lab4/instructmem.sv Line: 63
 Info (12021): Found 2 design units, including 2 entities, in source file flag_handler.sv
     Info (12023): Found entity 1: flag_handler File: C:/Users/hunte/Documents/EE469/Lab4/flag_handler.sv Line: 5
     Info (12023): Found entity 2: flag_handler_testbench File: C:/Users/hunte/Documents/EE469/Lab4/flag_handler.sv Line: 32
@@ -298,7 +298,7 @@ Info (12021): Found 2 design units, including 2 entities, in source file mux4_1_
     Info (12023): Found entity 2: mux4_1_64x_testbench File: C:/Users/hunte/Documents/EE469/Lab4/mux4_1_64x.sv Line: 17
 Info (12021): Found 2 design units, including 2 entities, in source file processor.sv
     Info (12023): Found entity 1: processor File: C:/Users/hunte/Documents/EE469/Lab4/processor.sv Line: 4
-    Info (12023): Found entity 2: processor_testbench File: C:/Users/hunte/Documents/EE469/Lab4/processor.sv Line: 126
+    Info (12023): Found entity 2: processor_testbench File: C:/Users/hunte/Documents/EE469/Lab4/processor.sv Line: 153
 Info (12021): Found 2 design units, including 2 entities, in source file mux2_1_5x.sv
     Info (12023): Found entity 1: mux2_1_5x File: C:/Users/hunte/Documents/EE469/Lab4/mux2_1_5x.sv Line: 6
     Info (12023): Found entity 2: mux2_1_5x_testbench File: C:/Users/hunte/Documents/EE469/Lab4/mux2_1_5x.sv Line: 20
@@ -312,16 +312,18 @@ Info (12021): Found 2 design units, including 2 entities, in source file registe
     Info (12023): Found entity 2: register64_3x_testbench File: C:/Users/hunte/Documents/EE469/Lab4/register64_3x.sv Line: 18
 Info (12021): Found 2 design units, including 2 entities, in source file regfileread_queue.sv
     Info (12023): Found entity 1: regfileread_queue File: C:/Users/hunte/Documents/EE469/Lab4/regfileread_queue.sv Line: 5
-    Info (12023): Found entity 2: regfileread_queue_testbench File: C:/Users/hunte/Documents/EE469/Lab4/regfileread_queue.sv Line: 55
+    Info (12023): Found entity 2: regfileread_queue_testbench File: C:/Users/hunte/Documents/EE469/Lab4/regfileread_queue.sv Line: 49
 Info (12021): Found 2 design units, including 2 entities, in source file datamem_queue_sub.sv
     Info (12023): Found entity 1: datamem_queue_sub File: C:/Users/hunte/Documents/EE469/Lab4/datamem_queue_sub.sv Line: 5
-    Info (12023): Found entity 2: datamem_queue_sub_testbench File: C:/Users/hunte/Documents/EE469/Lab4/datamem_queue_sub.sv Line: 15
+    Info (12023): Found entity 2: datamem_queue_sub_testbench File: C:/Users/hunte/Documents/EE469/Lab4/datamem_queue_sub.sv Line: 26
 Info (12021): Found 2 design units, including 2 entities, in source file datamem_queue.sv
     Info (12023): Found entity 1: datamem_queue File: C:/Users/hunte/Documents/EE469/Lab4/datamem_queue.sv Line: 5
-    Info (12023): Found entity 2: datamem_queue_testbench File: C:/Users/hunte/Documents/EE469/Lab4/datamem_queue.sv Line: 17
-Warning (10236): Verilog HDL Implicit Net warning at processor.sv(116): created implicit net for "ALU_out" File: C:/Users/hunte/Documents/EE469/Lab4/processor.sv Line: 116
+    Info (12023): Found entity 2: datamem_queue_testbench File: C:/Users/hunte/Documents/EE469/Lab4/datamem_queue.sv Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file forwarding_unit.sv
+    Info (12023): Found entity 1: forwarding_unit File: C:/Users/hunte/Documents/EE469/Lab4/forwarding_unit.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at alu_queue.sv(25): created implicit net for "ShiftDir0_int" File: C:/Users/hunte/Documents/EE469/Lab4/alu_queue.sv Line: 25
 Info (12127): Elaborating entity "processor" for the top level hierarchy
-Info (12128): Elaborating entity "instruction_handler" for hierarchy "instruction_handler:ih" File: C:/Users/hunte/Documents/EE469/Lab4/processor.sv Line: 20
+Info (12128): Elaborating entity "instruction_handler" for hierarchy "instruction_handler:ih" File: C:/Users/hunte/Documents/EE469/Lab4/processor.sv Line: 21
 Info (12128): Elaborating entity "D_FF_64" for hierarchy "instruction_handler:ih|D_FF_64:d" File: C:/Users/hunte/Documents/EE469/Lab4/instruction_handler.sv Line: 14
 Info (12128): Elaborating entity "D_FF" for hierarchy "instruction_handler:ih|D_FF_64:d|D_FF:eachBit[0].d" File: C:/Users/hunte/Documents/EE469/Lab4/D_FF_64.sv Line: 14
 Info (12128): Elaborating entity "sign_extender" for hierarchy "instruction_handler:ih|sign_extender:s1" File: C:/Users/hunte/Documents/EE469/Lab4/instruction_handler.sv Line: 18
@@ -332,16 +334,16 @@ Info (12128): Elaborating entity "shift_left_2" for hierarchy "instruction_handl
 Info (12128): Elaborating entity "adder64" for hierarchy "instruction_handler:ih|adder64:branchAdder" File: C:/Users/hunte/Documents/EE469/Lab4/instruction_handler.sv Line: 31
 Info (12128): Elaborating entity "full_adder" for hierarchy "instruction_handler:ih|adder64:branchAdder|full_adder:f0" File: C:/Users/hunte/Documents/EE469/Lab4/adder64.sv Line: 13
 Info (12128): Elaborating entity "instructmem" for hierarchy "instruction_handler:ih|instructmem:imem" File: C:/Users/hunte/Documents/EE469/Lab4/instruction_handler.sv Line: 41
-Warning (10175): Verilog HDL warning at instructmem.sv(28): ignoring unsupported system task File: C:/Users/hunte/Documents/EE469/Lab4/instructmem.sv Line: 28
-Error (10170): Verilog HDL syntax error at test12_Division.arm(91) near text: _. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/hunte/Documents/EE469/Lab4/test12_Division.arm Line: 91
-Info (10648): Verilog HDL Display System Task info at instructmem.sv(47): Running benchmark:  File: C:/Users/hunte/Documents/EE469/Lab4/instructmem.sv Line: 47
+Warning (10175): Verilog HDL warning at instructmem.sv(30): ignoring unsupported system task File: C:/Users/hunte/Documents/EE469/Lab4/instructmem.sv Line: 30
+Error (10170): Verilog HDL syntax error at test06_MulLslLsr.arm(42) near text: _. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/hunte/Documents/EE469/Lab4/test06_MulLslLsr.arm Line: 42
+Info (10648): Verilog HDL Display System Task info at instructmem.sv(49): Running benchmark:  File: C:/Users/hunte/Documents/EE469/Lab4/instructmem.sv Line: 49
 Error (12152): Can't elaborate user hierarchy "instruction_handler:ih|instructmem:imem" File: C:/Users/hunte/Documents/EE469/Lab4/instruction_handler.sv Line: 41
 Info (144001): Generated suppressed messages file C:/Users/hunte/Documents/EE469/Lab4/output_files/DE1_SoC.map.smsg
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 3 warnings
-    Error: Peak virtual memory: 4775 megabytes
-    Error: Processing ended: Mon Nov 29 22:34:32 2021
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:19
+    Error: Peak virtual memory: 4773 megabytes
+    Error: Processing ended: Wed Dec 01 15:09:53 2021
+    Error: Elapsed time: 00:00:14
+    Error: Total CPU time (on all processors): 00:00:30
 
 
 +------------------------------------------+

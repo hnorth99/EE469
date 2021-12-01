@@ -6,7 +6,8 @@ module processor(clk, reset);
 	
 	logic LT, ALU_Zero, UncondBr, BrTaken, ImmALUA, RegWrite;
 	logic RdToRdB, Imm12ALU, ShiftToALUB, ShiftDir;
-	logic ReadMem, MemWr, RdToRdA, FlagE, swap;
+	logic ReadMem, MemWr, RdToRdA, FlagE, swap,
+			FwdALU, FwdMem, FwdT1, FwdT2, FwdT3, FwdT4;
 	logic [02:0] ALUCntrl;
 	logic [01:0] RegWData;
 	logic [04:0] rd, rm, rn;
@@ -23,46 +24,52 @@ module processor(clk, reset);
 									.UncondBr, .BrTaken, .ImmALUA, .RegWrite, 
 									.RdToRdB, .Imm12ALU, .RegWData, .ShiftToALUB, .ShiftDir,
 									.ReadMem, .MemWr, .RdToRdA, .ALUCntrl, .FlagE,
+									.FwdALU, .FwdMem, .FwdT1, .FwdT2, .FwdT3, .FwdT4,
 									.rd, .rm, .rn, .imm26, .imm19, .imm12, .imm9,
 									.shamt, .swap);
 									
 	/*************************CONTROL LOGIC QUEUES ******************************************************/			
 	// Control Logic Queue for RegFileRead Pipeline Stage
-	logic SwapO, RdToRdAO, RdToRdBO, ShiftDirO, ShiftToALUBO, Imm12ALUO, ImmALUAO;
+	logic SwapO, RdToRdAO, RdToRdBO, ShiftDirO, ShiftToALUBO, Imm12ALUO, ImmALUAO,
+			FwdT1O, FwdT2O, FwdT3O, FwdT4O;
 	logic [5:0] ShamtO;
 	logic [11:0] Imm12O;
 	logic [8:0] Imm9O;
-	regfileread_queue rfrq (.clk, .reset, .Swap(swap), .RdToRdA, .RdToRdB, .Shamt(shamt), .ShiftDir,
-								 .ShiftToALUB, .Imm12ALU, .ImmALUA, .Imm12(imm12), .Imm9(imm9),
-								 .SwapO, .RdToRdAO, .RdToRdBO, .ShamtO, .ShiftDirO,
-								 .ShiftToALUBO, .Imm12ALUO, .ImmALUAO, .Imm12O, .Imm9O);
+	regfileread_queue rfrq (.clk, .reset, .Swap(swap), .RdToRdA, .RdToRdB,
+								 .Imm12ALU, .ImmALUA, .Imm12(imm12), .Imm9(imm9),
+								 .FwdT1, .FwdT2, .FwdT3, .FwdT4,
+								 .SwapO, .RdToRdAO, .RdToRdBO,  
+								 .Imm12ALUO, .ImmALUAO, .Imm12O, .Imm9O,
+								 .FwdT1O, .FwdT2O, .FwdT3O, .FwdT4O);
 	// Control Logic Queue for ALU Pipeline Stage
 	logic [2:0] ALUCntrlO;
-	logic FlagEO;
-	alu_queue aq (.clk, .reset, .ALUCntrl, .FlagE, .ALUCntrlO, .FlagEO);
+	logic FlagEO, FwdALUO;
+	alu_queue aq (.clk, .reset, .ALUCntrl, .FlagE, .FwdALU, .ShiftDir, .ShiftToALUB, .Shamt(shamt),
+					  .ALUCntrlO, .FlagEO, .FwdALUO, .ShiftDirO, .ShiftToALUBO, .ShamtO);
 	
 	// Control Logic Queue for DataMem Pipeline Stage
-	logic ReadMemO, MemWrO;
-	datamem_queue dmq (.clk, .reset, .ReadMem, .MemWr, .ReadMemO, .MemWrO);
+	logic ReadMemO, MemWrO, FwdMemO;
+	logic [1:0] RegWDataO;
+	datamem_queue dmq (.clk, .reset, .ReadMem, .RegWData, .MemWr, .FwdMem, .ReadMemO, .RegWDataO, .MemWrO, .FwdMemO);
 	
 	// Control Logic Queue for RegFileWrite Stage
 	logic RegWrtO;
-	logic [1:0] RegWDataO;
 	logic [4:0] RdO;
-	regfilewrite_queue rfwq (.clk, .reset, .RegWrt(RegWrite), .RegWData, .Rd(rd), .RegWrtO, .RegWDataO, .RdO);
+	regfilewrite_queue rfwq (.clk, .reset, .RegWrt(RegWrite), .Rd(rd), .RegWrtO, .RdO);
 	/************************* END CONTROL LOGIC QUEUES ***************************************************/
 	
 	/************************* PIPELINE: REGFILE STAGES *********************************************************/
 	// Register for regfileread stage
 	logic [4:0] rd_regfileread, rm_regfileread, rn_regfileread;
+	logic [1:0] fa, fb, dataA, dataB;
 	register5_3x rfreadgate (.clk, .reset, .din1(rd), .din2(rm), .din3(rn), 
 					             .dout1(rd_regfileread), .dout2(rm_regfileread), .dout3(rn_regfileread));
 	// Register for regfilewrite stage
-	logic [63:0] mem_out, aluout_datamem, mulout_datamem;
-	logic [63:0] dmread_regfilewrite, aluout_regfilewrite, mulout_regfilewrite;
-	register64_3x rfwritegate (.clk, .reset, .a(mem_out), .b(aluout_datamem), .c(mulout_datamem),
-										.outA(dmread_regfilewrite), .outB(aluout_regfilewrite), 
-										.outC(mulout_regfilewrite));
+	logic [63:0] write_data, write_data_reg, emptyB, emptyC;
+	logic [63:0] alu_out;
+	register64_3x rfwritegate (.clk, .reset, .a(write_data), .b('0), .c('0),
+										.outA(write_data_reg), .outB(emptyB), 
+										.outC(emptyC));
 	
 	logic [4:0] rm_post, rn_post;
 	swap sw (.i0(rm_regfileread), .i1(rn_regfileread), .swap(SwapO), .out0(rm_post), .out1(rn_post));
@@ -70,39 +77,48 @@ module processor(clk, reset);
 	logic [04:0] rda, rdb;
 	logic inverted_clk;
 	logic [63:0] mul_out, wdata, dA, dB;
-	//not #50 inv (inverted_clk, clk);	
+	not #50 inv (inverted_clk, clk);	
 	mux2_1_5x rdtora_mux (.i0(rm_post), .i1(rd_regfileread), .sel(RdToRdAO), .out(rda));
 	mux2_1_5x rdtorb_mux (.i0(rn_post), .i1(rd_regfileread), .sel(RdToRdBO), .out(rdb));
-	mux4_1_64x wdata_mux (.i00(aluout_regfilewrite), .i01(dmread_regfilewrite), .i10(mulout_regfilewrite), 
-								 .i11('0), .sel0(RegWDataO[0]), .sel1(RegWDataO[1]), .out(wdata));
-	regfile	r (.clk, .WriteRegister(RdO), .RegWrite(RegWrtO), .WriteData(wdata), 
-				   .ReadRegister1(rda), .ReadRegister2(rdb), .ReadData1(dA), .ReadData2(dB)); //dA passed forward
+	regfile	r (.clk(inverted_clk), .WriteRegister(RdO), .RegWrite(RegWrtO), .WriteData(write_data_reg), 
+				   .ReadRegister1(rda), .ReadRegister2(rdb), .ReadData1(dA), .ReadData2(dB));
 					
 	logic [63:0] zeimm12, seimm9, imm, ALUA;				
 	zero_extender #(52) imm12_ze (.in(Imm12O), .out(zeimm12));
 	sign_extender #(55) imm9_se (.in(Imm9O), .out(seimm9));
 	mux2_1_64x imm12alu_mux (.i0(seimm9), .i1(zeimm12), .sel(Imm12ALUO), .out(imm));
-	mux2_1_64x immalu_mux (.i0(dA), .i1(imm), .sel(ImmALUAO), .out(ALUA));					  //ALUA passed forward
+	mux2_1_64x immalu_mux (.i0(dA), .i1(imm), .sel(ImmALUAO), .out(ALUA));					  
 	
-	logic [63:0] shiftres, ALUB;
-	shifter s (.value(dB), .direction(ShiftDirO), .distance(ShamtO), .result(shiftres));
-	mux2_1_64x shifttoalub_mux (.i0(dB), .i1(shiftres), .sel(ShiftToALUBO), .out(ALUB));  //ALUB passed forward
+	logic [63:0] dA_post, dB_post, A, B;
+	mux4_1_64x da_fwd (.i00(dA), .i01(write_data), .i10(alu_out), .i11('0),
+							 .sel0(dataA[0]), .sel1(dataA[1]), .out(dA_post)); //dA_post passed forward 
+	//mux4_1_64x db_fwd (.i00(dB), .i01(write_data), .i10(alu_out), .i11('0), 
+	//						 .sel0(dataB[0]), .sel1(dataB[1]), .out(dB_post)); //dB_post passed forward 
+	mux4_1_64x fa_fwd (.i00(ALUA), .i01(write_data), .i10(alu_out), .i11('0),
+							 .sel0(fa[0]), .sel1(fa[1]), .out(A)); 				//A passed forward 
+	mux4_1_64x fb_fwd (.i00(dB), .i01(write_data), .i10(alu_out), .i11('0), 
+							 .sel0(fb[0]), .sel1(fb[1]), .out(B)); 				//B passed forward 
 	
 	logic [63:0] mult_dummy;
-	mult m (.A(dA), .B(dB), .doSigned(1'b1), .mult_low(mul_out), .mult_high(mult_dummy)); //mul_out passed forward
+	mult m (.A(dA_post), .B(B), .doSigned(1'b1), .mult_low(mul_out), .mult_high(mult_dummy)); //mul_out passed forward
 	/************************* PIPELINE: REGFILE STAGES END **************************************************/
 
 	/************************* PIPELINE: ALU STAGE  *********************************************************/
 	// Register for ALU/EXEC stage
 	logic [63:0] da_alu;
-	D_FF_64 daalu (.clk, .reset, .d(dA), .q(da_alu));									//da_alu passed forward
+	D_FF_64 daalu (.clk, .reset, .d(dA_post), .q(da_alu));									//da_alu passed forward
 	logic [63:0] a_alu, b_alu, mulout_alu;
-	register64_3x alugate (.clk, .reset, .a(ALUA), .b(ALUB), .c(mul_out),
+	logic [4:0] rd_alu;																			
+	register5 rd_alugate(.clk, .reset, .din(rd_regfileread), .en(1), .dout(rd_alu));			//rd_alu passed forward
+	register64_3x alugate (.clk, .reset, .a(A), .b(B), .c(mul_out),
 										.outA(a_alu), .outB(b_alu), .outC(mulout_alu)); //mulout_alu passed forward
 	
-	logic [63:0] alu_out;
+	logic [63:0] shiftres, ALUB;
+	shifter s (.value(b_alu), .direction(ShiftDirO), .distance(ShamtO), .result(shiftres));
+	mux2_1_64x shifttoalub_mux (.i0(b_alu), .i1(shiftres), .sel(ShiftToALUBO), .out(ALUB));
+	
 	logic ALU_Neg, ALU_Oflow, ALU_Cout;
-	alu al_unit (.A(a_alu), .B(b_alu), .cntrl(ALUCntrlO), .result(alu_out), .negative(ALU_Neg), .zero(ALU_Zero), 
+	alu al_unit (.A(a_alu), .B(ALUB), .cntrl(ALUCntrlO), .result(alu_out), .negative(ALU_Neg), .zero(ALU_Zero), 
 					 .overflow(ALU_Oflow), .carryout(ALU_Cout)); 						//alu_out passed forward
 	
 	logic zflag, oflag, nflag, cflag;
@@ -113,15 +129,26 @@ module processor(clk, reset);
 	
 	/************************* PIPELINE: DATAMEM STAGE  ******************************************************/
 	// Register for ALU/EXEC stage
-	logic [63:0] da_datamem;
+	logic [63:0] da_datamem, aluout_datamem, mulout_datamem, mem_out;
+	logic [4:0] rd_mem;
+	register5 rd_datamem(.clk, .reset, .din(rd_alu), .en(1), .dout(rd_mem));			//rd_mem passed forward
 	register64_3x datamemgate (.clk, .reset, .a(alu_out), .b(mulout_alu), .c(da_alu),
 										.outA(aluout_datamem), .outB(mulout_datamem), .outC(da_datamem));
-																													//mulout_datamem passed forward
-																													//aluout_datamem passed forward
-
+	
 	datamem mem (.address(aluout_datamem), .write_enable(MemWrO), .read_enable(ReadMemO), .write_data(da_datamem), 
-				    .clk, .xfer_size(4'b1000), .read_data(mem_out));								//mem_out passed forward
+				    .clk, .xfer_size(4'b1000), .read_data(mem_out));								
+					 
+	mux4_1_64x wdata_mux (.i00(aluout_datamem), .i01(mem_out), .i10(mulout_datamem), 
+								 .i11('0), .sel0(RegWDataO[0]), .sel1(RegWDataO[1]), .out(write_data));
+																														// 
 	/************************* PIPELINE: DATAMEM STAGE END  ******************************************************/
+	
+	/************************* Forwarding  ***********************************************************************/
+	forwarding_unit f (.rd, .rm(rm_post), .rn(rn_post), .rd_alu, .rd_mem,
+							 .FwdALU(FwdALUO), .FwdMem(FwdMemO), .FwdT1, .FwdT2, .FwdT3, .FwdT4,
+							 .fa, .fb, .da(dataA), .db(dataB));
+	/************************* Forwarding END  *******************************************************************/
+	
 endmodule
 
 module processor_testbench();
@@ -138,7 +165,7 @@ module processor_testbench();
 	
 	initial begin
 		reset <= 1; 				  	  @(posedge clk);
-		reset <= 0;			repeat(30)@(posedge clk);
+		reset <= 0;			repeat(20)@(posedge clk);
 		$stop;
 	end
 endmodule

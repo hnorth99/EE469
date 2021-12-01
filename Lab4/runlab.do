@@ -5,13 +5,17 @@ vlib work
 #     All Verilog files that are part of this design should have
 #     their own "vlog" line below.
 
+vlog "./forwarding_unit.sv"
 vlog "./instruction_handler.sv"
 vlog "./instruction_decoder.sv"
 vlog "./instructmem.sv"
 vlog "./datamem.sv"
 vlog "./math.sv"
 vlog "./alu_queue.sv"
+vlog "./datamem_queue.sv"
+vlog "./datamem_queue_sub.sv"
 vlog "./regfilewrite_queue.sv"
+vlog "./regfileread_queue.sv"
 vlog "./alu_queue_sub.sv"
 vlog "./regfilewrite_queue_sub.sv"
 vlog "./register5_3x.sv"

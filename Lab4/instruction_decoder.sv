@@ -4,13 +4,15 @@ module instruction_decoder(instruction, LT, ALU_Zero,
 									UncondBr, BrTaken, ImmALUA, RegWrite, 
 									RdToRdB, Imm12ALU, RegWData, ShiftToALUB, ShiftDir,
 									ReadMem, MemWr, RdToRdA, ALUCntrl, FlagE,
+									FwdALU, FwdMem, FwdT1, FwdT2, FwdT3, FwdT4,
 									rd, rm, rn, imm26, imm19, imm12, imm9,
 									shamt, swap);
 									
 	input logic [31:0] instruction;
 	input logic LT, ALU_Zero;
 	output logic 		 UncondBr, BrTaken, ImmALUA, RegWrite, RdToRdB, Imm12ALU, 
-							 ShiftToALUB, ShiftDir, ReadMem, MemWr, RdToRdA, FlagE, swap;
+							 ShiftToALUB, ShiftDir, ReadMem, MemWr, RdToRdA, FlagE, swap,
+							 FwdALU, FwdMem, FwdT1, FwdT2, FwdT3, FwdT4;
 	output logic [1:0] RegWData;
 	output logic [2:0] ALUCntrl;
 	output logic [4:0] rd, rm, rn;
@@ -20,7 +22,7 @@ module instruction_decoder(instruction, LT, ALU_Zero,
 	output logic [8:0]  imm9;
 	output logic [5:0]  shamt;
 	
-	logic [17:0] control_code;
+	logic [23:0] control_code;
 		
 	enum {ADDI, ADDS, B, BLT, CBZ, LDUR, LSL, LSR, MUL, STUR, SUBS} operation;
 	always_comb begin
@@ -198,34 +200,40 @@ module instruction_decoder(instruction, LT, ALU_Zero,
 	
 	always_comb begin
 		case (operation)
-			ADDI: control_code = 18'bX01101000XX0X01000;
-			ADDS: control_code = 18'bX0010X000XX0001010;
-			B: 	control_code = 18'b11X0XXXXXXX0XXXX00;
+			ADDI: control_code = 24'b000111X01101000XX0X01000;
+			ADDS: control_code = 24'b000111X0010X000XX0001010;
+			B: 	control_code = 24'bXXXX0011X0XXXXXXX0XXXX00;
 			BLT: 	begin
 						if(LT) begin 
-							control_code = 18'b01X0XXXXXXX0XXXX00;
+							control_code = 24'bXXXX0001X0XXXXXXX0XXXX00;
 						end
 						else begin
-							control_code = 18'b00X0XXXXXXX0XXXX00;
+							control_code = 24'bXXXX0000X0XXXXXXX0XXXX00;
 						end
 					end
 			CBZ: 	begin
 						if(ALU_Zero) begin 
-							control_code = 18'b01X01XXX0XX0X00000;
+							control_code = 24'b10000001X01XXX0XX0X00000;
 						end
 						else begin
-							control_code = 18'b00X01XXX0XX0X00000;
+							control_code = 24'b10000000X01XXX0XX0X00000;
 						end
 					end
-			LDUR: control_code = 18'bX01100010X10X01000;
-			LSL:	control_code = 18'bX0X10X0010X0X00000;
-			LSR:	control_code = 18'bX0X10X0011X0X00000;
-			MUL:	control_code = 18'bX0X10X10XXX00XXX00;
-			STUR:	control_code = 18'bX01000XX0XX1101000;
-			SUBS:	control_code = 18'bX0010X000XX0001111;
+			LDUR: control_code = 24'b001010X01100010X10X01000;
+			LSL:	control_code = 24'b000111X0X10X0010X0X00000;
+			LSR:	control_code = 24'b000111X0X10X0011X0X00000;
+			MUL:	control_code = 24'b000111X0X10X10XXX00XXX00;
+			STUR:	control_code = 24'b011000X01000XX0XX1101000;
+			SUBS:	control_code = 24'b000111X0010X000XX0001111;
 		endcase
 	end
 	
+	assign FwdT4 			= control_code[23];
+	assign FwdT3 			= control_code[22];
+	assign FwdT2 			= control_code[21];
+	assign FwdT1 			= control_code[20];
+	assign FwdMem 			= control_code[19];
+	assign FwdALU  		= control_code[18];
 	assign UncondBr 		= control_code[17];
 	assign BrTaken  		= control_code[16];
 	assign ImmALUA	 		= control_code[15];

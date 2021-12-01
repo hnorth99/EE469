@@ -4,11 +4,16 @@
 // Additionally takes a 3 bit input (ALUCntrl) and 1 bit input (FlagE) 
 // that will be loaded into the register.
 // Output of the register is projected onto ALUCntrlO and FlagEO.
-module alu_queue_sub (clk, reset, ALUCntrl, FlagE, ALUCntrlO, FlagEO);
-	input logic clk, reset, FlagE;
+module alu_queue_sub (clk, reset, ALUCntrl, FlagE, FwdALU, ShiftDir, ShiftToALUB, Shamt, 
+							 ALUCntrlO, FlagEO, FwdALUO, ShiftDirO, ShiftToALUBO, ShamtO);
+	input logic clk, reset, FlagE, FwdALU;
+	input logic ShiftDir, ShiftToALUB;
+	input logic [5:0] Shamt;
 	input logic [2:0] ALUCntrl;
 	output logic [2:0] ALUCntrlO;
-	output logic FlagEO;
+	output logic ShiftDirO, ShiftToALUBO;
+	output logic [5:0] ShamtO;
+	output logic FlagEO, FwdALUO;
 	
 	genvar i;
 	generate
@@ -17,13 +22,25 @@ module alu_queue_sub (clk, reset, ALUCntrl, FlagE, ALUCntrlO, FlagEO);
 		end
 	endgenerate
 	
+	// 6 bit dff
+	genvar j;
+	generate
+		for (j = 0; j < 64; j++) begin : eachBit0
+			D_FF ds (.q(ShamtO[j]), .d(Shamt[j]), .reset, .clk);
+		end
+	endgenerate
+	
 	D_FF flag (.clk, .reset, .d(FlagE), .q(FlagEO));
-
+	D_FF FwdALUDFF (.clk, .reset, .d(FwdALU), .q(FwdALUO));
+	D_FF dffShiftDir (.clk, .reset, .d(ShiftDir), .q(ShiftDirO));
+	D_FF dffShiftToALUB (.clk, .reset, .d(ShiftToALUB), .q(ShiftToALUBO));
 endmodule
 
 module alu_queue_sub_testbench();
-	logic clk, reset, FlagE, FlagEO;
+	logic clk, reset, FlagE, FlagEO, FwdALU, FwdALUO;
 	logic [2:0] ALUCntrl, ALUCntrlO;
+	logic ShiftDir, ShiftToALUB, ShiftDirO, ShiftToALUBO;
+	logic [5:0] Shamt, ShamtO;
 
 	// Simulated clock for the testing
 	parameter clock_period = 100;

@@ -4,34 +4,22 @@
 // Additionally takes a 1 bit input (RegWrt), 2 bit input (RegWData), and 5 bit input (Rd)
 // that will be loaded into the register.
 // Output of the register is projected onto RegWrtO, RegWDataO, and RdO.
-module regfilewrite_queue_sub (clk, reset, RegWrt, RegWData, Rd, RegWrtO, RegWDataO, RdO);
+module regfilewrite_queue_sub (clk, reset, RegWrt, Rd, RegWrtO, RdO);
 	input logic clk, reset, RegWrt;
-	input logic [1:0] RegWData;
 	input logic [4:0] Rd;
 	output logic RegWrtO;
-	output logic [1:0] RegWDataO;
 	output logic [4:0] RdO;
 	
 	D_FF rw (.clk, .reset, .d(RegWrt), .q(RegWrtO));
 	
-	genvar i;
-	generate
-		for (i = 0; i < 2; i++) begin : eachBit
-			D_FF rwd (.clk, .reset, .d(RegWData[i]), .q(RegWDataO[i]));
-		end
-	endgenerate
-	
 	register5 rd (.clk, .reset, .din(Rd), .en(1'b1), .dout(RdO));
 	
-
 endmodule
 
 module regfilewrite_queue_sub_testbench();
 	logic clk, reset, RegWrt;
-	logic [1:0] RegWData;
 	logic [4:0] Rd;
 	logic RegWrtO;
-	logic [1:0] RegWDataO;
 	logic [4:0] RdO;
 
 	// Simulated clock for the testing
@@ -44,12 +32,12 @@ module regfilewrite_queue_sub_testbench();
 	regfilewrite_queue_sub dut (.*);
 	
 	initial begin
-		reset <= 0; RegWrt <= 1'd0; RegWData <= 2'd0; Rd <= 5'd0;		@(posedge clk);
+		reset <= 0; RegWrt <= 1'd0; Rd <= 5'd0;		@(posedge clk);
 		reset <= 1; 																	@(posedge clk);
 		reset <= 0; 																	@(posedge clk);
-		RegWrt <= 1'd1; RegWData <= 2'd0; Rd <= 5'd0;			repeat(2)@(posedge clk); // RegWrtO gets a 1
-		RegWrt <= 1'd1; RegWData <= 2'd3; Rd <= 5'd0;			repeat(2)@(posedge clk); // RegWDataO gets a 3
-		RegWrt <= 1'd1; RegWData <= 2'd3; Rd <= 5'd12;			repeat(2)@(posedge clk); // RdO gets a 12
+		RegWrt <= 1'd1; Rd <= 5'd0;			repeat(2)@(posedge clk); // RegWrtO gets a 1
+		RegWrt <= 1'd1; Rd <= 5'd0;			repeat(2)@(posedge clk); // RegWDataO gets a 3
+		RegWrt <= 1'd1; Rd <= 5'd12;			repeat(2)@(posedge clk); // RdO gets a 12
 		
 		$stop;
 	end 
